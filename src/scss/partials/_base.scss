@@ -1,0 +1,10 @@
+@import "../settings/fonts";
+
+* {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: $font-base;
+}
