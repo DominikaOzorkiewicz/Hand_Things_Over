@@ -1,0 +1,43 @@
+@import "../settings/colors";
+
+.header {
+    &__user {
+        display: flex;
+        justify-content: flex-end;
+        margin-top: 45px;
+
+        &-link {
+            font-size: 0.875em;
+            color: $color-log;
+            text-decoration: none;
+            padding: 10px;
+            border: 0.75px solid transparent;
+
+            &:hover,
+            &:active {
+                border: 0.75px solid gold;
+            }
+        }
+    }
+}
+
+.nav__list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 20px;
+
+    &-el {
+        font-size: 1.125em;
+        color: $color-text;
+        cursor: pointer;
+        border: 0.75px solid transparent;
+        padding: 10px;
+
+        &:hover,
+        &:active {
+            border: 0.75px solid $color-text;
+        }
+    }
+}

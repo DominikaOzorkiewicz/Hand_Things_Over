@@ -1,0 +1,25 @@
+$columns: 12;
+$column-base-width: 100% / $columns;
+
+@for $i from 1 through $columns {
+    .col-#{$i} {
+        width: $column-base-width * $i;
+    }
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+
+    [className*='col-'] {
+        min-height: 1px;
+        width: $column-base-width;
+        padding: 12px;
+    }
+}
+
+@media (max-width: 550px) {
+    [class*='col-'] {
+        width: 100%;
+    }
+}

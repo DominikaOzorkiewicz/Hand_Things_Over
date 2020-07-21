@@ -1,4 +1,5 @@
 @import "../settings/fonts";
+@import "../settings/colors";
 
 * {
     box-sizing: border-box;
@@ -7,4 +8,10 @@
 
 body {
     font-family: $font-base;
+    color: $color-text;
+    max-width: 2020px;
+
+    @media (min-width: 2020px) {
+        margin:0 auto;
+    }
 }
