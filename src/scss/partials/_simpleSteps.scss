@@ -1,0 +1,57 @@
+@import "../settings/colors";
+
+
+.simpleSteps {
+    text-align: center;
+
+    &__title {
+        font-size: 2.375em;
+        margin-top: 55px;
+    }
+
+    &__deco {
+        margin: 40px auto;
+    }
+
+    &__box {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        &-icon {
+            margin-bottom: 10px;
+        }
+
+        &-title {
+            font-size: 1.125em;
+            line-height: 1.3em;
+
+            &::after {
+                content: '';
+                width: 90px;
+                height: 1px;
+                background-color: $color-text;
+                display: block;
+                margin: 10px auto;
+            }
+        }
+        &-text {}
+    }
+}
+
+#simpleSteps > div:nth-child(2) {
+    background-color: $color-background;
+    min-height: 325px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0 40px;
+}
+
+#simpleSteps > div:nth-child(3) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 35px 0 80px;
+}

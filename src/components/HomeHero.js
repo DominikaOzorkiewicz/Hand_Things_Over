@@ -23,8 +23,8 @@ export const HomeHero = () => {
                     <h2 className='hero__welcome-title'>Oddaj niechciane rzeczy w zaufane ręce</h2>
                     <img className='hero__welcome-deco' src={decoration} alt='Decoration'/>
                     <div className='hero__welcome-buttons'>
-                        <Link className='hero__welcome-buttons--item' to='/login'>Oddaj<br/>rzeczy</Link>
-                        <Link className='hero__welcome-buttons--item' to='/login'>Zorganizuj<br/>zbiórkę</Link>
+                        <Link className='hero__welcome-buttons--item btn' to='/login'>Oddaj<br/>rzeczy</Link>
+                        <Link className='hero__welcome-buttons--item btn' to='/login'>Zorganizuj<br/>zbiórkę</Link>
                     </div>
                 </div>
 
