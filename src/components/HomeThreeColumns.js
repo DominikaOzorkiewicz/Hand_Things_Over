@@ -1,12 +1,10 @@
 import React from "react";
 
-
 export const HomeTreeColumns = () => {
 
-
     return (
-        <div className='treeColumns'>
-
-        </div>
+        <section className='treeColumns'>
+            Trzy kolumny
+        </section>
     );
 }

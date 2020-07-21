@@ -1,19 +1,22 @@
 import React from "react";
-import {HomeHeader} from "./HomeHeader";
+import {HomeHero} from "./HomeHero";
 import {HomeTreeColumns} from "./HomeThreeColumns";
+import {HomeAbout} from "./HomeAbout";
+import {HomeSimpleSteps} from "./HomeSimpleSteps";
+import {HomeOrganizations} from "./HomeOrganizations";
+import {HomeContact} from "./HomeContact";
 
 
 export const Home = () => {
 
     return (
         <div className='home'>
-
-            <HomeHeader/>
-
-            <h1>Hello</h1>
-
+            <HomeHero/>
             <HomeTreeColumns/>
-
+            <HomeSimpleSteps/>
+            <HomeAbout/>
+            <HomeOrganizations/>
+            <HomeContact/>
         </div>
     );
 }
