@@ -1,0 +1,39 @@
+@import "../settings/colors";
+@import "../settings/fonts";
+
+.threeColumns {
+    background: transparent url("../../assets/threecolumns-background.png");
+    height: 385px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    &__column {
+        text-align: center;
+        width: 335px;
+
+        &-counter {
+            font-size: 5.625em;
+            color: $color-number;
+        }
+
+        &-title {
+            font-size: 1.125em;
+            text-transform: uppercase;
+            padding: 30px 0 28px;
+        }
+
+        &-description {
+            font-size: 1em;
+            font-family: $font-alt;
+            font-weight: 300;
+            line-height: 1.8em;
+            letter-spacing: -0.32px;
+        }
+        
+        @media (max-width: 1050px) {
+            font-size: 75%;
+            width: 33%;
+        }
+    }
+}

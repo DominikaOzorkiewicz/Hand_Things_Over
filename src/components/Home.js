@@ -1,6 +1,6 @@
 import React from "react";
 import {HomeHero} from "./HomeHero";
-import {HomeTreeColumns} from "./HomeThreeColumns";
+import {HomeThreeColumns} from "./HomeThreeColumns";
 import {HomeAbout} from "./HomeAbout";
 import {HomeSimpleSteps} from "./HomeSimpleSteps";
 import {HomeOrganizations} from "./HomeOrganizations";
@@ -12,7 +12,7 @@ export const Home = () => {
     return (
         <div className='home'>
             <HomeHero/>
-            <HomeTreeColumns/>
+            <HomeThreeColumns/>
             <HomeSimpleSteps/>
             <HomeAbout/>
             <HomeOrganizations/>

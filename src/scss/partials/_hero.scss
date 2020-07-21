@@ -1,17 +1,16 @@
 @import "../settings/colors";
 
 .home {
-    height: 80vh;
+    height: 960px;
 }
 
 .hero {
     margin-right: 140px;
-    height: 960px;
+    height: 100%;
 
     &__image {
         height: 100%;
         img {
-            height: 100%;
             position: relative;
             left: -480px;
             z-index: -99;
