@@ -1,0 +1,40 @@
+{
+  "organizations": [
+    {
+      "id": "o-001",
+      "name": "Lorem Ipsum 1",
+      "purpose": "Quis varius quam quisque id diam vel quam elementum pulvinar.",
+      "items": "Egestas, sed, tempus"
+    },
+    {
+      "id": "o-002",
+      "name": "Lorem Ipsum 2",
+      "purpose": "Hendrerit gravida rutrum quisque non tellus orci ac auctor augue.",
+      "items": "Ut, aliquam, purus, sit, amet"
+    },
+    {
+      "id": "o-003",
+      "name": "Lorem Ipsum 3",
+      "purpose": "Scelerisque in dictum non consectetur a erat nam.",
+      "items": "Mi, quis, hendrerit, dolor"
+    },
+    {
+      "id": "o-004",
+      "name": "Lorem Ipsum 4",
+      "purpose": "Quis varius quam quisque id diam vel quam elementum pulvinar.",
+      "items": "Egestas, sed, tempus"
+    },
+    {
+      "id": "o-005",
+      "name": "Lorem Ipsum 5",
+      "purpose": "Hendrerit gravida rutrum quisque non tellus orci ac auctor augue.",
+      "items": "Ut, aliquam, purus, sit, amet"
+    },
+    {
+      "id": "o-006",
+      "name": "Lorem Ipsum 6",
+      "purpose": "Scelerisque in dictum non consectetur a erat nam.",
+      "items": "Mi, quis, hendrerit, dolor"
+    }
+  ]
+}
