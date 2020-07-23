@@ -1,58 +1,56 @@
-{
-  "foundations": [
-    {
-      "id": "f-001",
-      "name": "Dbam o zdrowie",
-      "purpose": "Pomoc osobom znajdującym się w trudnej sytuacji życiowej.",
-      "items": "ubrania, jedzenie, sprzęt AGD, meble, zabawki"
-    },
-    {
-      "id": "f-002",
-      "name": "Dla dzieci",
-      "purpose": "Pomoc dzieciom z ubogich rodzin.",
-      "items": "ubrania, meble, zabawki"
-    },
-    {
-      "id": "f-003",
-      "name": "Bez domu",
-      "purpose": "Pomoc dla osób nie posiadających miejsca zamieszkania.",
-      "items": "ubrania, jedzenie, ciepłe koce"
-    },
-    {
-      "id": "f-004",
-      "name": "Siepomaga",
-      "purpose": "Pomoc dla osób potrzebujących",
-      "items": "ubrania, zabawki"
-    },
-    {
-      "id": "f-005",
-      "name": "NoWaste",
-      "purpose": "Ograniczenie wyrzucania żywności",
-      "items": "jedzenie"
-    },
-    {
-      "id": "f-006",
-      "name": "Nie nurkuj do kontenera",
-      "purpose": "Pomoc dla osób z ubogich rodzin potrzebujących ubrań",
-      "items": "ubrania, pluszaki"
-    },
-    {
-      "id": "f-007",
-      "name": "Nowe łachy Gosi Andrzejewicz",
-      "purpose": "Pomoc dla celebrytów w poszukiwaniu nowych stylizacji",
-      "items": "piękne i oryginalne ubrania"
-    },
-    {
-      "id": "f-008",
-      "name": "Dla domu",
-      "purpose": "Pomoc w zaopatrzeniu mieszkania dla osób porzebujących.",
-      "items": "sprzęt RTV, drobne AGD"
-    },
-    {
-      "id": "f-009",
-      "name": "Dla schronisk",
-      "purpose": "Pomoc dla zwierząt ze schronisk",
-      "items": "sucha karma, obroże, smycze, zabawki, koce"
-    }
-  ]
-}
+[
+  {
+    "id": "f-001",
+    "name": "Dbam o zdrowie",
+    "purpose": "Pomoc osobom znajdującym się w trudnej sytuacji życiowej.",
+    "items": "ubrania, jedzenie, sprzęt AGD, meble, zabawki"
+  },
+  {
+    "id": "f-002",
+    "name": "Dla dzieci",
+    "purpose": "Pomoc dzieciom z ubogich rodzin.",
+    "items": "ubrania, meble, zabawki"
+  },
+  {
+    "id": "f-003",
+    "name": "Bez domu",
+    "purpose": "Pomoc dla osób nie posiadających miejsca zamieszkania.",
+    "items": "ubrania, jedzenie, ciepłe koce"
+  },
+  {
+    "id": "f-004",
+    "name": "Siepomaga",
+    "purpose": "Pomoc dla osób potrzebujących.",
+    "items": "ubrania, zabawki"
+  },
+  {
+    "id": "f-005",
+    "name": "NoWaste",
+    "purpose": "Ograniczenie wyrzucania żywności.",
+    "items": "jedzenie"
+  },
+  {
+    "id": "f-006",
+    "name": "Nie nurkuj do kontenera",
+    "purpose": "Pomoc dla osób z ubogich rodzin potrzebujących ubrań.",
+    "items": "ubrania, pluszaki"
+  },
+  {
+    "id": "f-007",
+    "name": "Nowe łachy Gosi Andrzejewicz",
+    "purpose": "Pomoc dla celebrytów w poszukiwaniu nowych stylizacji.",
+    "items": "piękne i oryginalne ubrania"
+  },
+  {
+    "id": "f-008",
+    "name": "Dla domu",
+    "purpose": "Pomoc w zaopatrzeniu mieszkania dla osób porzebujących.",
+    "items": "sprzęt RTV, drobne AGD"
+  },
+  {
+    "id": "f-009",
+    "name": "Dla schronisk",
+    "purpose": "Pomoc dla zwierząt ze schronisk.",
+    "items": "sucha karma, obroże, smycze, zabawki, koce"
+  }
+]

@@ -1,7 +1,13 @@
-import React from "react";
+import React, {useState} from "react";
 import decoration from "../assets/decoration.svg";
+import {HomeOrganizationsList} from "./HomeOrganizationsList";
 
 export const HomeOrganizations = () => {
+    const [type, setType] = useState('Fundacja');
+
+    const handleChooseType = (event) => {
+        setType(event.target.value);
+    }
 
     return (
         <section className='organizations' id='organizations'>
@@ -14,9 +20,9 @@ export const HomeOrganizations = () => {
             </div>
 
             <div className='organizations__buttons row'>
-                <button className='organizations__buttons-single col-2'>Fundacjom</button>
-                <button className='organizations__buttons-single col-2'>Organizacjom<br/>pozarządowym</button>
-                <button className='organizations__buttons-single col-2'>Lokalnym zbiórkom</button>
+                <button className='organizations__buttons-single col-2' value={'Fundacja'} onClick={handleChooseType}>Fundacjom</button>
+                <button className='organizations__buttons-single col-2' value={'Organizacja'} onClick={handleChooseType}>Organizacjom<br/>pozarządowym</button>
+                <button className='organizations__buttons-single col-2' value={'Zbiórka'} onClick={handleChooseType}>Lokalnym zbiórkom</button>
             </div>
 
             <div className='row'>
@@ -24,7 +30,7 @@ export const HomeOrganizations = () => {
             </div>
 
             <div className='row'>
-                Lista organizacji
+                <HomeOrganizationsList contentType={type}/>
             </div>
 
         </section>
