@@ -1,0 +1,81 @@
+@import "../settings/colors";
+@import "../settings/fonts";
+
+// *** Contact *** //
+.contact {
+    background: #FFFFFFC9 url("../../assets/contact-background.jpg") no-repeat;
+    background-size: cover;
+    background-blend-mode: screen;
+    width: 100%;
+    height: 100%;
+
+     > div:nth-child(1) {
+         height: 95%;
+     }
+
+    > div:nth-child(2) {
+        flex-direction: column;
+    }
+    
+    &__content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        
+        &-title {
+            font-size: 2.375em;
+            text-align: center;
+            letter-spacing: -0.76px;
+        }
+
+        > div {
+            flex-direction: column;
+        }
+    }
+
+    &__deco {
+        padding-top: 37px;
+        padding-bottom: 77px;
+        margin: 0 auto;
+    }
+
+    &__form {
+        &-row {
+            &--inputs {
+                flex-direction: column;
+            }
+            &--textarea {
+                flex-direction: column;
+            }
+        }
+
+        &-button {
+            background-color: #fff;
+            text-transform: capitalize;
+            font-size: 1.125em;
+            width: 150px;
+            height: 50px;
+        }
+
+    }
+}
+
+// *** Footer *** //
+.footer {
+    > .col-4 {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    &__copyright {
+      font-size: 1.125em;
+    }
+
+    &__socialmedia {
+        > .facebook-icon {
+            padding-right: 15px;
+        }
+    }
+}

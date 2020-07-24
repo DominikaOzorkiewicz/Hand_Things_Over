@@ -11,13 +11,11 @@ export const Pagination = ({ elementsCount, changePage }) => {
 
     return (
         <ul className='pagination'>
-
             { pages.map(pageNumber =>
                 <li key={pageNumber} className='pagination__number' onClick={ () => changePage(pageNumber) }>
                     {pageNumber}
                 </li>
             ) }
-
         </ul>
     );
 }

@@ -5,7 +5,6 @@ import donations from "../database/donations.json";
 import {Pagination} from "./Pagination";
 
 export const HomeOrganizationsList = ({ contentType }) => {
-
     const [type, setType] = useState('Fundacja');
     const [activeList, setActiveList] = useState([]);
     const [currentPage, setCurrentPage] = useState(1);
@@ -14,7 +13,6 @@ export const HomeOrganizationsList = ({ contentType }) => {
 
     const indexOfLastElement = currentPage * charityElementsPerPage;
     const indexOfFirstElement = indexOfLastElement - charityElementsPerPage;
-
 
     useEffect(() => {
         setType(contentType);
@@ -34,7 +32,6 @@ export const HomeOrganizationsList = ({ contentType }) => {
             setElementsCount(donations.length);
             setActiveList(currentElements);
         }
-
     }, [contentType, type, currentPage]);
 
     const changePage = pageNumber => {
@@ -47,7 +44,6 @@ export const HomeOrganizationsList = ({ contentType }) => {
         <div className='charity'>
 
             <ul className='col-12 charity__list'>
-
                 {(activeList).map(element =>
                     <li className='charity__list-el row' key={element.id}>
                         <div className='col-6 charity__list--left'>
@@ -65,7 +61,6 @@ export const HomeOrganizationsList = ({ contentType }) => {
                         </div>
                     </li>
                 )}
-
             </ul>
 
             {elementsCount <= 3 ? null : <Pagination elementsCount={elementsCount} changePage={changePage} /> }
