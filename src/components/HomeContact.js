@@ -8,54 +8,58 @@ export const HomeContact = () => {
 
     return (
         <>
-            <section className='contact' id='contact'>
-                <div className='row'>
+            <section className='contact row' id='contact'>
 
-                    <div className='col-7'/>
+                <div className='col-7 contact__column' />
+                <div className='col-5 contact__column'>
+                    <h2 className='contact__title'>
+                        Skontaktuj się z nami
+                    </h2>
+                    <img src={decoration} className='contact__deco' alt='Dekoracja' />
 
-                    <div className='col-5 contact__content'>
+                    {/* <p>{successMessage}</p> */}
 
-                        <div className='row row--title'>
-                            <h2 className='contact__content-title'>
-                                Skontaktuj się z nami
-                            </h2>
-                            <img className='contact__deco' src={decoration} alt='Decoration'/>
-                            {/* <p>{successMessage}</p> */}
+                    <form className='contact__form'>
+                        <div className='contact__form-inputs'>
+                            <label className='contact__form-label'>
+                                Wpisz swoje imię
+                                <input
+                                    className='contact__form-input'
+                                    type='text'
+                                    placeholder='Imię'
+                                    required
+                                />
+                            </label>
+                            <label className='contact__form-label'>
+                                Wpisz swój emali
+                                <input
+                                    className='contact__form-input'
+                                    type='email'
+                                    placeholder='abc.xyz.com'
+                                    required
+                                />
+                            </label>
                         </div>
 
-                        <form className='contact__form' onSubmit={sendForm}>
-                            <div className='row contact__form-row--inputs'>
-                                <div>
-                                    <label className='contact__form-label'>Wpisz swoje imię</label>
-                                    <input type='text' className='contact__form-input' placeholder='Imię' required={true}/>
-                                </div>
+                        <label className='contact__form-label'>
+                            Wpisz swoją wiadomość
+                            <textarea
+                                className='contact__form-input'
+                                required
+                                placeholder='Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'
+                            />
+                        </label>
 
-                                <div>
-                                    <label className='contact__form-label'>Wpisz swój email</label>
-                                    <input type='email' className='contact__form-input' placeholder='abc@xyz.com' required={true}/>
-                                </div>
-                            </div>
+                        <button className='contact__form-btn' onSubmit={sendForm}>
+                            Wyślij
+                        </button>
 
-                            <div className='row contact__form-row--textarea'>
-                                <label className='contact__form-label'>Wpisz swoją wiadomość</label>
-                                <textarea className='contact__form-textarea' required={true} placeholder='Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'/>
-                                {/* <p>{errorMessage}</p> */}
-                            </div>
-
-                            <button className='contact__form-button btn'>Wyślij</button>
-
-                        </form>
-
-                    </div>
-
+                    </form>
                 </div>
 
-                <div className='row'>
-                    <HomeFooter/>
-                </div>
+                <HomeFooter />
 
             </section>
         </>
-
     );
 }
