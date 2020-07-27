@@ -8,26 +8,74 @@ export const HomeHeader = () => {
         <header className='header' id='header'>
 
             <div className='header__user'>
-                <Link to='/login' className='header__user-link'>Zaloguj</Link>
-                <Link to='/register' className='header__user-link'>Załóż konto</Link>
+                <Link to='/login' className='header__user-link'>
+                    Zaloguj
+                </Link>
+                <Link to='/register' className='header__user-link'>
+                    Załóż konto
+                </Link>
             </div>
 
-            <nav className="header__nav">
-                <ul className="nav__list">
-                    <li className="nav__list-el">
-                        <ScrollLink activeClass="active" to='header' className="menu__list-link" spy={true} smooth={true} duration={1000} onClick={() => scroll.scrollToTop()}>Start</ScrollLink>
+            <nav className='header__nav'>
+                <ul className='nav__list'>
+                    <li className='nav__list-el'>
+                        <ScrollLink
+                            activeClass='active'
+                            to='header'
+                            className='nav__list-link'
+                            spy={true}
+                            smooth={true}
+                            offset={-50}
+                            duration={1000}
+                            onClick={() => scroll.scrollToTop()}>
+                            Start
+                        </ScrollLink>
                     </li>
-                    <li className="nav__list-el">
-                        <ScrollLink activeClass="active" to="simpleSteps" className="menu__list-link" spy={true} smooth={true} duration={1000}>O co chodzi?</ScrollLink>
+                    <li className='nav__list-el'>
+                        <ScrollLink
+                            activeClass='active'
+                            to='simpleSteps'
+                            className='nav__list-link'
+                            spy={true}
+                            smooth={true}
+                            duration={1000}>
+                            O co chodzi?
+                        </ScrollLink>
                     </li>
-                    <li className="nav__list-el">
-                        <ScrollLink activeClass="active" to="about" className="menu__list-link" spy={true} smooth={true} duration={1000}>O nas</ScrollLink>
+                    <li className='nav__list-el'>
+                        <ScrollLink
+                            activeClass='active'
+                            to='about'
+                            className='nav__list-link'
+                            spy={true}
+                            smooth={true}
+                            duration={1000}>
+                            O nas
+                        </ScrollLink>
                     </li>
-                    <li className="nav__list-el">
-                        <ScrollLink activeClass="active" to="organizations" className="menu__list-link" spy={true} smooth={true} duration={1000}>Fundacja i organizacje</ScrollLink>
+                    <li className='nav__list-el'>
+                        <ScrollLink
+                            activeClass='active'
+                            to='organizations'
+                            className='nav__list-link'
+                            spy={true}
+                            smooth={true}
+                            offset={-50}
+                            duration={1000}>
+                            Fundacja i organizacje
+                        </ScrollLink>
                     </li>
-                    <li className="nav__list-el">
-                        <ScrollLink activeClass="active" to="contact" className="menu__list-link" spy={true} smooth={true} duration={1000}>Kontakt</ScrollLink>
+                    <li className='nav__list-el'>
+                        <ScrollLink
+                            activeClass='active'
+                            to='contact'
+                            className='nav__list-link'
+                            spy={true}
+                            smooth={true}
+                            offset={50}
+                            duration={1000}>
+                            Kontakt
+                        </ScrollLink>
                     </li>
                 </ul>
             </nav>

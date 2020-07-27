@@ -13,6 +13,11 @@
             padding: 10px;
             border: 0.75px solid transparent;
 
+            &:nth-of-type(2) {
+                border: 0.75px solid gold;
+                margin-left: 10px;
+            }
+
             &:hover,
             &:active {
                 border: 0.75px solid gold;
@@ -23,15 +28,25 @@
 
 .nav__list {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     flex-wrap: wrap;
-    margin-top: 20px;
+    margin: 20px 0 0 100px;
 
     &-el {
         font-size: 1.125em;
         color: $color-text;
         cursor: pointer;
+        margin: 10px 0;
+
+        .active {
+            border: 0.75px solid $color-text;
+        }
+    }
+
+    &-link {
+        color: $color-text;
+        text-decoration: none;
         border: 0.75px solid transparent;
         padding: 10px;
 

@@ -1,5 +1,5 @@
 import React from "react";
-import {HomeHeader} from "./HomeHeader";
+import {Header} from "./Header";
 import decoration from "../assets/decoration.svg";
 import {Link} from "react-router-dom";
 
@@ -11,7 +11,7 @@ export const Logout = () => {
             <div className='row'>
                 <div className='col-6' />
                 <div className='col-6' style={ {paddingRight: "120px"} }>
-                    <HomeHeader />
+                    <Header />
                 </div>
             </div>
 

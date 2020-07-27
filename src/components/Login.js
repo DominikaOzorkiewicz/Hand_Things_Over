@@ -1,6 +1,6 @@
 import React from "react";
+import {Header} from "./Header";
 import {Link} from "react-router-dom";
-import {HomeHeader} from "./HomeHeader";
 import decoration from "../assets/decoration.svg";
 
 export const Login = () => {
@@ -13,7 +13,7 @@ export const Login = () => {
             <div className='row'>
                 <div className='col-6' />
                 <div className='col-6' style={ {paddingRight: "120px"} }>
-                    <HomeHeader />
+                    <Header />
                 </div>
             </div>
 
