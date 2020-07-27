@@ -61,6 +61,12 @@ export const HomeContact = () => {
         } else {setMessageError('')}
 
         sendMessage();
+        // Reset form
+        setCompleteMessage({
+            name: '',
+            email: '',
+            message: '',
+        });
     }
 
     return (
