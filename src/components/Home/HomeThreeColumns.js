@@ -31,7 +31,6 @@ export const HomeThreeColumns = () => {
          },[visibility]);
 
     useEffect(() => {
-        console.log(bagsCounter);
         if (bagsCounter >= 10) {
             clearInterval(counter)
         }

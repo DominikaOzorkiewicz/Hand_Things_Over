@@ -14,6 +14,11 @@
             position: relative;
             left: -480px;
             z-index: -99;
+            transition: 0.3s;
+
+            @media (min-width: 2020px) {
+                left: -250px;
+            }
         }
     }
 
@@ -21,6 +26,10 @@
         height: 100%;
         z-index: 99;
         background-color: rgba(255, 255, 255, 0.9);
+
+        @media (min-width: 2020px) {
+            background-color: transparent;
+        }
     }
 
     &__welcome {

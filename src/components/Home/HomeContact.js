@@ -50,7 +50,7 @@ export const HomeContact = () => {
             setNameError('Podane imię jest nieprawidłowe!');
         } else {setNameError('')}
 
-        if (!completeMessage.email.match(/^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/)
+        if (!completeMessage.email.match(/^(([^<>()[\]\\.,;:\s@]+(\.[^<>()[\]\\.,;:\s@]+)*)|(.+))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/)
             ||
             completeMessage.email.length < 2) {
             setEmailError('Podany email jest nieprawidłowy!');

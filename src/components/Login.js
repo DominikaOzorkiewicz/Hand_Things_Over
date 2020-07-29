@@ -25,21 +25,22 @@ export const Login = () => {
         event.preventDefault();
         let passed = true;
 
-        if (!user.email.match(/^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/)
+        if (!user.email.match(/^(([^<>()[\]\\.,;:\s@]+(\.[^<>()[\]\\.,;:\s@]+)*)|(.+))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/)
             || user.email.length < 2) {
             setEmailError('Podany email jest nieprawidłowy');
             passed = false;
-        } else {setEmailError('')}
+        } else {
+            setEmailError('');
+        }
 
         if (user.password.length < 6) {
             setPasswordError('Podane hasło jest za krótkie');
             passed = false;
-        } else {setPasswordError('')}
+        } else {
+            setPasswordError('');
+        }
 
         if (passed === true) {
-            console.log(user);
-            console.log('Użytkownik został zalogowany');
-
             firebase
                 .auth()
                 .signInWithEmailAndPassword(user.email, user.password)
@@ -50,6 +51,8 @@ export const Login = () => {
                     setLoginError(error.message);
                     console.log(error.message);
                 });
+            console.log(user);
+            console.log('Użytkownik został zalogowany');
         }
     }
 
