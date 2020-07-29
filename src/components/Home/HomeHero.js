@@ -1,7 +1,7 @@
 import React from "react";
 import {HomeHeader} from "./HomeHeader";
-import heroImg from "../assets/hero-img.jpg";
-import decoration from "../assets/decoration.svg";
+import heroImg from "../../assets/hero-img.jpg";
+import decoration from "../../assets/decoration.svg";
 import {Link} from "react-router-dom";
 
 export const HomeHero = () => {

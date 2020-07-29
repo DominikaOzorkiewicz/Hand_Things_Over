@@ -1,6 +1,6 @@
 import React from "react";
-import decoration from "../assets/decoration.svg";
-import signature from "../assets/signature.svg"
+import decoration from "../../assets/decoration.svg";
+import signature from "../../assets/signature.svg"
 
 export const HomeAbout = () => {
 

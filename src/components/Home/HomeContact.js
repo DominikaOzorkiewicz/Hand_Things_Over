@@ -1,5 +1,5 @@
 import React, {useState} from "react";
-import decoration from "../assets/decoration.svg";
+import decoration from "../../assets/decoration.svg";
 import {HomeFooter} from "./HomeFooter";
 
 export const HomeContact = () => {

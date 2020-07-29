@@ -1,7 +1,7 @@
 import React, {useEffect, useState} from "react";
 import {Link} from "react-router-dom";
 import {Link as ScrollLink, animateScroll as scroll} from "react-scroll";
-import {auth} from "../services/firebase";
+import {auth} from "../../services/firebase";
 
 export const HomeHeader = () => {
     const [loggedUser, setLoggedUser] = useState('');

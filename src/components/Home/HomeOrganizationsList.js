@@ -1,8 +1,8 @@
 import React, {useEffect, useState} from "react";
-import foundations from "../database/foundations.json";
-import organizations from "../database/organizations.json";
-import donations from "../database/donations.json";
-import {Pagination} from "./Pagination";
+import foundations from "../../database/foundations.json";
+import organizations from "../../database/organizations.json";
+import donations from "../../database/donations.json";
+import {Pagination} from "../Pagination";
 
 export const HomeOrganizationsList = ({ contentType }) => {
     const [type, setType] = useState('Fundacja');

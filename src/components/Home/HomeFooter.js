@@ -1,6 +1,6 @@
 import React from "react";
-import instagramIcon from "../assets/instagram.svg";
-import facebookIcon from "../assets/facebook.svg";
+import instagramIcon from "../../assets/instagram.svg";
+import facebookIcon from "../../assets/facebook.svg";
 
 export const HomeFooter = () => {
 

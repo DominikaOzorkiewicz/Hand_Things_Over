@@ -1,5 +1,5 @@
 import React, {useState} from "react";
-import decoration from "../assets/decoration.svg";
+import decoration from "../../assets/decoration.svg";
 import {HomeOrganizationsList} from "./HomeOrganizationsList";
 
 export const HomeOrganizations = () => {

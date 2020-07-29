@@ -1,9 +1,9 @@
 import React from "react";
-import decoration from "../assets/decoration.svg";
-import pickIcon from "../assets/icon-1.svg";
-import packIcon from "../assets/icon-2.svg";
-import searchIcon from "../assets/icon-3.svg";
-import pickupIcon from "../assets/icon-4.svg";
+import decoration from "../../assets/decoration.svg";
+import pickIcon from "../../assets/icon-1.svg";
+import packIcon from "../../assets/icon-2.svg";
+import searchIcon from "../../assets/icon-3.svg";
+import pickupIcon from "../../assets/icon-4.svg";
 import {Link} from "react-router-dom";
 
 export const HomeSimpleSteps = () => {
