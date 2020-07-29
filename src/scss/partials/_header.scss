@@ -23,6 +23,25 @@
                 border: 0.75px solid gold;
             }
         }
+
+        &--email {
+            border: none !important;
+            font-weight: 600;
+            color: $color-text;
+            &:hover,
+            &:active {
+                border: none;
+                cursor: default;
+            }
+        }
+
+        &--donate {
+            border: 0.75px solid gold;
+        }
+
+        &--logout {
+            border: none !important;
+        }
     }
 }
 

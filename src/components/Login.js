@@ -2,6 +2,7 @@ import React, {useState} from "react";
 import {Header} from "./Header";
 import {Link, useHistory} from "react-router-dom";
 import decoration from "../assets/decoration.svg";
+import firebase from "../services/firebase";
 
 export const Login = () => {
     const [user, setUser] = useState({
@@ -10,6 +11,7 @@ export const Login = () => {
     });
     const [emailError, setEmailError] = useState('');
     const [passwordError, setPasswordError] = useState('');
+    const [loginError, setLoginError] = useState('');
     const history = useHistory();
 
     const handleChangeData = (event) => {
@@ -35,9 +37,19 @@ export const Login = () => {
         } else {setPasswordError('')}
 
         if (passed === true) {
-            history.push('/');
             console.log(user);
             console.log('Użytkownik został zalogowany');
+
+            firebase
+                .auth()
+                .signInWithEmailAndPassword(user.email, user.password)
+                .then((user) => {
+                    history.push('/');
+                })
+                .catch((error) => {
+                    setLoginError(error.message);
+                    console.log(error.message);
+                });
         }
     }
 
@@ -55,6 +67,16 @@ export const Login = () => {
                 <div className='col-12 login__column'>
                     <div className='login__title'>Zaloguj</div>
                     <img className='login__deco' src={decoration} alt='Dekoracja' />
+
+                    { loginError.length > 0 ?
+                        <p className='error__message'>
+                            {loginError}
+                        </p>
+                        :
+                        <p className='error__message' hidden={true}>
+                            {loginError}
+                        </p>
+                    }
 
                     <form className='login__form' onSubmit={handleLogIn}>
                         <div className='login__form-inputs'>

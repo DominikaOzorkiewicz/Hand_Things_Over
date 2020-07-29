@@ -2,16 +2,19 @@ import React, {useState} from "react";
 import {Header} from "./Header";
 import decoration from "../assets/decoration.svg";
 import {Link, useHistory} from "react-router-dom";
+import firebase from "../services/firebase";
 
 export const Register = () => {
     const [user, setUser] = useState({
         email: '',
         password: '',
         password_confirmation: '',
+        id: Math.random().toString(36).substr(2, 9)
     });
     const [emailError, setEmailError] = useState('');
     const [passwordError, setPasswordError] = useState('');
     const [passwordConfirmationError, setPasswordConfirmationError] = useState('');
+    const [registerError, setRegisterError] = useState('');
     const history = useHistory();
 
     const handleChangeData = (event) => {
@@ -42,9 +45,19 @@ export const Register = () => {
         } else {setPasswordConfirmationError('')}
 
         if (passed === true) {
-            history.push('/');
             console.log(user);
             console.log('Użytkownik zarejestrowany');
+
+            firebase
+                .auth()
+                .createUserWithEmailAndPassword(user.email, user.password)
+                .then((user) => {
+                    history.push('/login');
+                })
+                .catch((error) => {
+                    setRegisterError(error.message);
+                    console.log(error.message);
+                });
         }
     }
 
@@ -62,6 +75,16 @@ export const Register = () => {
                 <div className='col-12 register__column'>
                     <div className='register__title'>Załóż konto</div>
                     <img className='register__deco' src={decoration} alt='Dekoracja' />
+
+                    { registerError.length > 0 ?
+                        <p className='error__message'>
+                            {registerError}
+                        </p>
+                        :
+                        <p className='error__message' hidden={true}>
+                            {registerError}
+                        </p>
+                    }
 
                     <form className='register__form' onSubmit={handleRegister}>
                         <div className='register__form-inputs'>

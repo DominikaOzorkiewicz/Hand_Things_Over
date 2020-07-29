@@ -1,20 +1,43 @@
-import React from "react";
+import React, {useEffect, useState} from "react";
 import {Link} from "react-router-dom";
 import {Link as ScrollLink, animateScroll as scroll} from "react-scroll";
+import {auth} from "../services/firebase";
 
 export const HomeHeader = () => {
+    const [loggedUser, setLoggedUser] = useState('');
+
+    useEffect(() => {
+        if (auth().currentUser !== null) {
+            setLoggedUser(auth().currentUser.email)
+        }
+    },[]);
 
     return (
         <header className='header' id='header'>
 
-            <div className='header__user'>
-                <Link to='/login' className='header__user-link'>
-                    Zaloguj
-                </Link>
-                <Link to='/register' className='header__user-link'>
-                    Załóż konto
-                </Link>
-            </div>
+            { loggedUser.length > 1 ?
+                <div className='header__user'>
+                    <div className='header__user-link header__user--email'>
+                        Witaj {loggedUser}!
+                    </div>
+                    <Link to='/' className='header__user-link header__user--donate'>
+                        Oddaj rzeczy
+                    </Link>
+                    <Link to='/logout' className='header__user-link header__user--logout'
+                          onClick={() => auth().signOut()}>
+                        Wyloguj
+                    </Link>
+                </div>
+                :
+                <div className='header__user'>
+                    <Link to='/login' className='header__user-link'>
+                        Zaloguj
+                    </Link>
+                    <Link to='/register' className='header__user-link'>
+                        Załóż konto
+                    </Link>
+                </div>
+            }
 
             <nav className='header__nav'>
                 <ul className='nav__list'>
