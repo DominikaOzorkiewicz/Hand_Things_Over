@@ -11,7 +11,7 @@ body {
     max-width: 2020px;
 
     @media (min-width: 2020px) {
-        margin:0 auto;
+        margin: 0 auto;
     }
 }
 
@@ -24,6 +24,7 @@ body {
     text-transform: uppercase;
     text-decoration: none;
     border: 0.75px solid $color-text;
+    background-color: transparent;
     display: flex;
     justify-content: center;
     align-items: center;

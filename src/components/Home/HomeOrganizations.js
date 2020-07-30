@@ -22,7 +22,7 @@ export const HomeOrganizations = () => {
             <div className='organizations__buttons row'>
                 <button className='organizations__buttons-single col-2' value={'Fundacja'} onClick={handleChooseType}>Fundacjom</button>
                 <button className='organizations__buttons-single col-2' value={'Organizacja'} onClick={handleChooseType}>Organizacjom<br/>pozarządowym</button>
-                <button className='organizations__buttons-single col-2' value={'Zbiórka'} onClick={handleChooseType}>Lokalnym zbiórkom</button>
+                <button className='organizations__buttons-single col-2' value={'Zbiórka'} onClick={handleChooseType}>Lokalnym<br/>zbiórkom</button>
             </div>
 
             <div className='row'>

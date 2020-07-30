@@ -1,6 +1,5 @@
 @import "../../settings/colors";
 
-
 .simpleSteps {
     text-align: center;
 
@@ -36,22 +35,20 @@
                 margin: 10px auto;
             }
         }
-        &-text {}
     }
-}
+    > div:nth-child(2) {
+        background-color: $color-background;
+        min-height: 325px;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        padding: 0 40px;
+    }
 
-#simpleSteps > div:nth-child(2) {
-    background-color: $color-background;
-    min-height: 325px;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    padding: 0 40px;
-}
-
-#simpleSteps > div:nth-child(3) {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 35px 0 80px;
+    > div:nth-child(3) {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 35px 0 80px;
+    }
 }

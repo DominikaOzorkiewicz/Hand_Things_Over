@@ -5,6 +5,7 @@
     &__image {
         img {
             height: 100%;
+            object-fit: cover;
         }
     }
 
@@ -33,6 +34,7 @@
     &__steps {
         display: flex;
         padding-top: 75px;
+
         &-box {
             width: 190px;
             height: 190px;
