@@ -1,7 +1,7 @@
-import React, {useEffect, useState} from "react";
-import {Link} from "react-router-dom";
-import {Link as ScrollLink, animateScroll as scroll} from "react-scroll";
-import {auth} from "../../services/firebase";
+import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
+import { Link as ScrollLink, animateScroll as scroll } from "react-scroll";
+import { auth } from "../../services/firebase";
 
 export const HomeHeader = () => {
     const [loggedUser, setLoggedUser] = useState('');
@@ -20,7 +20,7 @@ export const HomeHeader = () => {
                     <div className='header__user-link header__user--email'>
                         Witaj {loggedUser}!
                     </div>
-                    <Link to='/' className='header__user-link header__user--donate'>
+                    <Link to='/oddaj-rzeczy' className='header__user-link header__user--donate'>
                         Oddaj rzeczy
                     </Link>
                     <Link to='/logout' className='header__user-link header__user--logout'
