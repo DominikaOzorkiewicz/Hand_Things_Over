@@ -4,6 +4,7 @@ import {Home} from "./components/Home/Home";
 import {Login} from "./components/Login";
 import {Register} from "./components/Register";
 import {Logout} from "./components/Logout";
+import {Form} from "./components/Form/Form";
 
 
 const App = () => {
@@ -17,6 +18,8 @@ const App = () => {
                     <Route path='/login' component={Login}/>
                     <Route path='/register' component={Register}/>
                     <Route path='/logout' component={Logout}/>
+
+                    <Route path='/oddaj-rzeczy' component={Form} />
                 </>
             </HashRouter>
 
