@@ -5,18 +5,22 @@
 @import "settings/grid";
 
 @import "partials/base";
-@import "partials/hero";
+@import "partials/home/hero";
 @import "partials/header";
-@import "partials/threeColumns";
-@import "partials/simpleSteps";
-@import "partials/about";
-@import "partials/organizations";
-@import "partials/organizationsList";
-@import "partials/pagination";
+@import "partials/home/threeColumns";
+@import "partials/home/simpleSteps";
+@import "partials/home/about";
+@import "partials/home/organizations";
+@import "partials/home/organizationsList";
+@import "partials/home/pagination";
 @import "partials/contact";
 @import "partials/login";
 @import "partials/register";
 @import "partials/logout";
 
-@import "partials/formHero";
-@import "partials/info";
+@import "partials/form/formHero";
+@import "partials/form/info";
+@import "partials/form/step1";
+@import "partials/form/step2";
+@import "partials/form/step3";
+@import "partials/form/step4";

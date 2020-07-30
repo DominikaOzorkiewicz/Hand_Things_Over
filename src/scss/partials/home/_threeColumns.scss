@@ -1,8 +1,8 @@
-@import "../settings/colors";
-@import "../settings/fonts";
+@import "../../settings/colors";
+@import "../../settings/fonts";
 
 .threeColumns {
-    background: transparent url("../../assets/threecolumns-background.png");
+    background: transparent url("../../../assets/threecolumns-background.png");
     height: 385px;
     display: flex;
     justify-content: space-around;

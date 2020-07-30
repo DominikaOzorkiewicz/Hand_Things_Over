@@ -1,5 +1,5 @@
-@import "../settings/fonts";
-@import "../settings/colors";
+@import "../../settings/colors";
+@import "../../settings/fonts";
 
 .about {
     background-color: $color-background;
@@ -51,7 +51,7 @@
     }
 
     &__photo {
-        background: url("./../../assets/people.jpg") no-repeat center;
+        background: url("./../../../assets/people.jpg") no-repeat center;
         background-size: cover;
     }
 }
