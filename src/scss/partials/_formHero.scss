@@ -1,8 +1,12 @@
 @import "../settings/colors";
 @import "../settings/fonts";
 
-.form {
-    &-image {}
+.formHero {
+    &__image {
+        img {
+            height: 100%;
+        }
+    }
 
     &__content {
         padding-right: 120px;
@@ -42,7 +46,7 @@
                 font-size: 1.375em;
                 transform: rotate(315deg);
                 text-align: center;
-                
+
                 h4 {
                     font-size: 2em;
                     padding-bottom: 20px;
@@ -50,5 +54,4 @@
             }
         }
     }
-
 }
