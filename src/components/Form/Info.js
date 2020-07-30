@@ -1,7 +1,6 @@
 import React from "react";
 
-export const Info = () => {
-    // info__text will depend on the specific step
+export const Info = ({ text }) => {
 
     return (
         <section className='info'>
@@ -9,7 +8,7 @@ export const Info = () => {
                 Ważne!
             </h3>
             <p className='info__text'>
-                Uzupełnij szczegóły dotyczące Twoich rzeczy. Dzięki temu będziemy wiedzieć komu najlepiej je przekazać.
+                {text}
             </p>
         </section>
     );

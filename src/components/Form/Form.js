@@ -1,13 +1,15 @@
 import React from "react";
-import { FormHero } from "./FormHero";
-import { Info } from "./Info";
+import {FormHero} from "./FormHero";
+import  {Steps} from "./Steps";
+import {HomeContact} from "../Home/HomeContact";
 
 export const Form = () => {
 
     return (
         <>
             <FormHero />
-            <Info />
+            <Steps/>
+            <HomeContact />
         </>
     );
 }
