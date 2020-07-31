@@ -9,7 +9,8 @@ module.exports = override (
     disableEsLint(),
 
     addExternalBabelPlugins(
-        '@babel/plugin-transform-react-jsx'
+        '@babel/plugin-transform-react-jsx',
+        '@babel/plugin-proposal-class-properties'
     )
 
 );
