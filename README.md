@@ -13,7 +13,7 @@ Hand Things Over is a website with a simple form that will make it easier for us
 The aim of this project is to create a place where everyone can donate unnecessary things to trusted institutions.
 
 ## Source
-This project is based on prototype "Oddam w dobre ręce" prepared by Magda - graduate of Coders Lab UX course.
+This project is based on prototype "Oddam w dobre ręce" in Adobe XD prepared by Magda - graduate of [Coders Lab](https://coderslab.pl) UX course.
 
 ## Tech
 
@@ -33,7 +33,6 @@ To run this project, install it locally using npm:
 ```
 $ cd ../Hand_Things_Over
 $ npm install
-$ npm start
 ```
 
 To run this project correctly, you need to connect it with Firebase:
