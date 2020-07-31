@@ -7,7 +7,7 @@
 * [Todos](#todos)
 
 
-### General info
+## General info
 
 Hand Things Over is a website with a simple form that will make it easier for users to donate items.
 The aim of this project is to create a place where everyone can donate unnecessary things to trusted institutions.
@@ -15,7 +15,7 @@ The aim of this project is to create a place where everyone can donate unnecessa
 ## Source
 This project is based on prototype "Oddam w dobre ręce" prepared by Magda - graduate of Coders Lab UX course.
 
-### Tech
+## Tech
 
 This project uses a number of open source projects to work properly:
 
@@ -57,7 +57,7 @@ Great! Project is ready to run!🚀
 $ npm start
 ```
 
-### Todos
+## Todos
 
  - Completing the form for donating items
  - Linking the completed form with the user's account
