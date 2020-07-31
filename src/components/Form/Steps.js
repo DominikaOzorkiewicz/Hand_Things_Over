@@ -1,5 +1,6 @@
 import React, {useEffect, useState} from "react";
 import {Info} from "./Info";
+import {FirstStep} from "../FirstStep";
 
 export const Steps = () => {
     // Set current Step number
@@ -58,7 +59,7 @@ export const Steps = () => {
                 </div>
 
                 <div className='col-8'>
-                    FORM
+                    <FirstStep />
                 </div>
 
                 <div className='col-12'>
