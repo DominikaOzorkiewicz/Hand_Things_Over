@@ -1,68 +1,66 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Hand Things Over - page for donating things
+#### Project is still in progress 👩‍🔧
+* [General info](#general-info)
+* [Source](#source)
+* [Tech](#tech)
+* [Setup](#setup)
+* [Todos](#todos)
 
-## Available Scripts
 
-In the project directory, you can run:
+### General info
 
-### `npm start`
+Hand Things Over is a website with a simple form that will make it easier for users to donate items.
+The aim of this project is to create a place where everyone can donate unnecessary things to trusted institutions.
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Source
+This project is based on prototype "Oddam w dobre ręce" prepared by Magda - graduate of Coders Lab UX course.
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+### Tech
 
-### `npm test`
+This project uses a number of open source projects to work properly:
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+* [Create React App](https://github.com/facebook/create-react-app)
+* [Sass](https://sass-lang.com/) - for styles
+* [React Router](https://github.com/ReactTraining/react-router) - for routing
+* [React Scroll](https://github.com/fisshy/react-scroll) -  for animating vertical scrolling
+* [React App Rewired](https://github.com/timarney/react-app-rewired) and [Customize-CRA](https://github.com/arackaf/customize-cra) - to override create-react-app webpack configs without ejecting
+* [React Visibility Sensor](https://github.com/joshwnj/react-visibility-sensor) - Sensor component for React that notifies you when it goes in or out of the window viewport
+* [Firebase](https://firebase.google.com) - authentication with email address and password
 
-### `npm run build`
+## Setup
+To run this project, install it locally using npm:
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+```
+$ cd ../Hand_Things_Over
+$ npm install
+$ npm start
+```
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+To run this project correctly, you need to connect it with Firebase:
+* Create Firebase account or sign in using Google account
+* Connect project with Firebase. If you don't know what to do, don't worry! [Firebase documentation](https://firebase.google.com/docs) will help you
+* Add new file with your Firebase configuration in this path: `src/services/firebaseConfig.js`
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```
+// firebaseConfig.js
+export const firebaseKey = "YOUR_DATA";
+export const firebaseDomain = "YOUR_DATA";
+export const firebaseDatabase = "YOUR_DATA";
+export const firebaseProjectID = "YOUR_DATA";
+export const firebaseStorageBucket = "YOUR_DATA";
+export const firebaseSenderID = "YOUR_DATA";
+export const firebaseAppID = "YOUR_DATA";
+```
 
-### `npm run eject`
+Great! Project is ready to run!🚀
+```
+$ npm start
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+### Todos
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+ - Completing the form for donating items
+ - Linking the completed form with the user's account
+ - User panel
+ - Version for mobile devices
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
