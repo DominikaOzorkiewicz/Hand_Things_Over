@@ -1,0 +1,53 @@
+@import "../../settings/colors";
+@import "../../settings/fonts";
+
+.form__select {
+    &-container {
+        display: flex;
+        align-items: baseline;
+        height: 249px;
+    }
+
+    &-label {
+        padding-right: 25px;
+        font-size: 1.5em
+    }
+
+    &-input {
+        font-size: 1.5em;
+        cursor: pointer;
+        width: 300px;
+        height: 49px;
+        border: 0.75px solid $color-text;
+        padding: 8px 18px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    // Select list
+    &-list--hidden {
+        display: none;
+    }
+
+    &-list--drop {
+        width: 86px;
+        height: 185px;
+        border: 0.75px solid $color-text;
+        cursor: pointer;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 15px 0 0 210px;
+    }
+
+    &-list-el {
+        font-size: 1.5em;
+        padding: 6.5px 35px;
+        width: 86px;
+
+        &:hover {
+            background-color: rgba(198, 197, 197, 0.53);
+        }
+    }
+}
