@@ -2,10 +2,11 @@ import React, {useEffect, useState} from "react";
 import {Info} from "./Info";
 import {StepOne} from "./StepOne";
 import {StepTwo} from "./StepTwo";
+import {StepThree} from "./StepThree";
 
 export const Steps = () => {
     // Set current Step number
-    const [currentStep, setCurrentStep] = useState(1);
+    const [currentStep, setCurrentStep] = useState(3);
     // Title for current step
     const [title, setTitle] = useState('');
     // Text for Info component
@@ -25,14 +26,15 @@ export const Steps = () => {
 
             case 2:
                 setCurrentStep(2);
-                setStepComponent(<StepTwo />);
                 setTitle('Podaj liczbę 60l worków, w które spakowałeś/aś rzeczy:');
+                setStepComponent(<StepTwo />);
                 setInfoText('Wszystkie rzeczy do oddania zapakuj w 60l worki. Dokładną instrukcję jak poprawnie spakować rzeczy znajdziesz TUTAJ.');
                 break;
 
             case 3:
                 setCurrentStep(3);
                 setTitle('Lokalizacja:');
+                setStepComponent(<StepThree />);
                 setInfoText('Jeśli wiesz komu chcesz pomóc, możesz wpisać nazwę tej organizacji w wyszukiwarce. Możesz też filtrować organizacje po ich lokalizacji bądź celu ich pomocy.');
                 break;
 
