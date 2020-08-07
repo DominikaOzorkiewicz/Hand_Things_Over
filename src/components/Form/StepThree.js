@@ -41,7 +41,12 @@ export const StepThree = () => {
                             alt='Arrow'
                         />
                     </div>
-                    <div className={ (drop === true ? 'form__location-select-list form__select-list--drop' : 'form__select-list--hidden') } onClick={handleDrop}>
+                    <div
+                        className={ (drop === true ?
+                            'form__location-select-list form__select-list--drop'
+                            :
+                            'form__select-list--hidden') }
+                        onClick={handleDrop}>
                         {drop && (
                             <ul>
                                 {cities.map((city, index) =>
@@ -49,7 +54,8 @@ export const StepThree = () => {
                                         key={index}
                                         value={city}
                                         className='form__location-select-list-el form__select-list-el'
-                                        onClick={handleChooseLocation}>
+                                        onClick={handleChooseLocation}
+                                    >
                                         {city}
                                     </option>
                                 )}
@@ -66,16 +72,21 @@ export const StepThree = () => {
             </p>
             <div className='form__helpGroups row'>
                 { helpGroups.map((group, index) =>
-                        <label className='form__helpGroups-label' key={index} >
+                    <React.Fragment key={index}>
+                        <input type='checkbox'
+                               id={group}
+                               className='form__helpGroups-checkbox'
+                               name='helpGroup'
+                               value={group}
+                               onClick={handleChooseHelpGroup}
+                        />
+                        <label
+                            className='form__helpGroups-label'
+                            htmlFor={group}
+                        >
                             {group}
-                            <input type='checkbox'
-                                   className='form__helpGroups-checkbox'
-                                   name={'helpGroup'}
-                                   value={group}
-                                   placeholder={group}
-                                   onClick={handleChooseHelpGroup}
-                            />
                         </label>
+                    </React.Fragment>
                 ) }
             </div>
             { /* --- END Help Groups checkboxes --- */}
