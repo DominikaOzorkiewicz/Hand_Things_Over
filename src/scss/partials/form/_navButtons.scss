@@ -1,0 +1,21 @@
+@import "../../settings/colors";
+@import "../../settings/fonts";
+
+.navButtons {
+    display: flex;
+    align-items: flex-end;
+
+    &__button {
+        min-width: 180px;
+        height: 79px;
+        font-size: 1.5em;
+        font-family: $font-base;
+        font-weight: 300;
+        border: 0.75px solid $color-text;
+
+        &:first-of-type {
+            margin-right: 50px;
+        }
+
+    }
+}

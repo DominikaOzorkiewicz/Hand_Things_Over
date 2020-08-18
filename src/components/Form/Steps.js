@@ -4,10 +4,12 @@ import {StepOne} from "./StepOne";
 import {StepTwo} from "./StepTwo";
 import {StepThree} from "./StepThree";
 import {StepFour} from "./StepFour";
+import {NavButtons} from "./NavButtons";
+import {Summary} from "./Summary";
 
 export const Steps = () => {
     // Set current Step number
-    const [currentStep, setCurrentStep] = useState(4);
+    const [currentStep, setCurrentStep] = useState(1);
     // Title for current step
     const [title, setTitle] = useState('');
     // Text for Info component
@@ -46,35 +48,52 @@ export const Steps = () => {
                 setInfoText('Podaj adres oraz termin odbioru rzeczy.');
                 break;
 
+            case 5:
+                setCurrentStep(5);
+                setTitle('Podsumowanie Twojej darowizny');
+                setStepComponent(<Summary />);
+                setInfoText('');
+                break;
+
             default:
                 break;
         }
     },[currentStep]);
 
+    const handleChangePage = (page) => {
+        setCurrentStep(page);
+    }
+
 
     return (
         <>
-            <Info text={infoText}/>
+            {currentStep === 5 ?
+                null : <Info text={infoText} />
+            }
 
             <section className='steps row'>
                 <div className='col-12 steps__numbering'>
-                    <p>
-                        Krok {currentStep}/4
-                    </p>
+                    {currentStep === 5 ? null :
+                        <p>
+                            Krok {currentStep}/4
+                        </p>
+                    }
                 </div>
 
                 <div className='col-12'>
-                    <h3 className='steps__title'>{title}</h3>
+                    <h3 className='steps__title'>
+                        {title}
+                    </h3>
                 </div>
 
                 <div className='col-8'>
-                    <form className='form'>
+                    <form className='form' id='donationForm'>
                         {stepComponent}
                     </form>
                 </div>
 
-                <div className='col-12'>
-                    NAVIGATION BUTTONS
+                <div className='col-5 navButtons'>
+                    <NavButtons currentStep={currentStep} changePage={handleChangePage}/>
                 </div>
 
             </section>
