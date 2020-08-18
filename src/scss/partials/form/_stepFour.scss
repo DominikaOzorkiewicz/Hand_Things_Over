@@ -1,0 +1,41 @@
+@import "../../settings/colors";
+@import "../../settings/fonts";
+
+.form__pickup {
+
+    &-title {
+        font-size: 1.5em;
+        font-weight: bold;
+        padding-bottom: 20px;
+    }
+
+    &-place {
+        padding-right: 40px;
+    }
+
+    &-date {
+        padding-left: 40px;
+    }
+
+    &-box {
+        width: 80%;
+        padding-bottom: 20px;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &-label {
+        font-size: 1.5em;
+        font-weight: 300;
+    }
+
+    &-input {
+        width: 256px;
+        height: 40px;
+        font-family: $font-base;
+        font-size: 24px;
+        font-weight: 300;
+        border: 0.75px solid $color-text;
+        background-color: transparent;
+    }
+}

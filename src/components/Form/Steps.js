@@ -3,10 +3,11 @@ import {Info} from "./Info";
 import {StepOne} from "./StepOne";
 import {StepTwo} from "./StepTwo";
 import {StepThree} from "./StepThree";
+import {StepFour} from "./StepFour";
 
 export const Steps = () => {
     // Set current Step number
-    const [currentStep, setCurrentStep] = useState(3);
+    const [currentStep, setCurrentStep] = useState(4);
     // Title for current step
     const [title, setTitle] = useState('');
     // Text for Info component
@@ -40,7 +41,8 @@ export const Steps = () => {
 
             case 4:
                 setCurrentStep(4);
-                setTitle('Podaj adres oraz termin odbioru rzecz przez kuriera');
+                setTitle('Podaj adres oraz termin odbioru rzeczy przez kuriera');
+                setStepComponent(<StepFour />);
                 setInfoText('Podaj adres oraz termin odbioru rzeczy.');
                 break;
 
