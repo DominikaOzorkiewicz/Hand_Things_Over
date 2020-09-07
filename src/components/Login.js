@@ -45,6 +45,7 @@ export const Login = () => {
                 .auth()
                 .signInWithEmailAndPassword(user.email, user.password)
                 .then((user) => {
+                    localStorage.setItem('ActiveUser', JSON.stringify(user));
                     history.push('/');
                 })
                 .catch((error) => {

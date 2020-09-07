@@ -2,29 +2,35 @@ import React, {useState} from "react";
 import arrowDown from "../../assets/icon-arrow-down.svg";
 import arrowUp from "../../assets/icon-arrow-up.svg";
 
-export const StepThree = () => {
+export const StepThree = ( {location, helpGroup, organizationName, handleComplexInfo} ) => {
     // Location
     const cities = ['Katowice', 'Kraków', 'Poznań', 'Warszawa', 'Wrocław'];
-    const [location, setLocation] = useState('— wybierz —');
+    const [city, setCity] = useState(location);
     const handleChooseLocation = (event) => {
-        setLocation(event.target.value);
+        handleComplexInfo('location', event.target.value);
+        setCity(event.target.value);
     }
 
+    // Drop options list for select custom input
     const [drop, setDrop] = useState(false);
     const handleDrop = (event) => {
         setDrop(!drop);
     }
 
     // Help Groups
-    const helpGroups = ['dzieciom', 'samotnym matkom', 'bezdomnym', 'niepełnosprawnym', 'osobom starszym']
-    const [helpGroup, setHelpGroup] = useState('');
+    const helpGroups = ['dzieciom', 'samotnym matkom', 'bezdomnym', 'niepełnosprawnym', 'osobom starszym'];
+    const [selectedGroup, setSelectedGroup] = useState(helpGroup);
     const handleChooseHelpGroup = (event) => {
-        setHelpGroup(event.target.value);
+        setSelectedGroup(event.target.value);
+        handleComplexInfo('helpGroup', event.target.value);
     }
 
     // Organization Name (optional)
-    const [organizationName, setOrganizationName] = useState('');
-
+    const [orgName, setOrgName] = useState(organizationName);
+    const handleOrgName = (event) => {
+        handleComplexInfo('organizationName', event.target.value);
+        setOrgName(event.target.value);
+    }
 
     return (
         <>
@@ -33,7 +39,7 @@ export const StepThree = () => {
                 <div className='form__location-select form__select'>
                     <div className='form__select-input' onClick={handleDrop}>
                         <div className='form__select-value'>
-                            {location}
+                            {city}
                         </div>
                         <img
                             className='form__select-arrow'
@@ -78,7 +84,8 @@ export const StepThree = () => {
                                className='form__helpGroups-checkbox'
                                name='helpGroup'
                                value={group}
-                               onClick={handleChooseHelpGroup}
+                               onChange={handleChooseHelpGroup}
+                               checked={selectedGroup === group}
                         />
                         <label
                             className='form__helpGroups-label'
@@ -98,8 +105,8 @@ export const StepThree = () => {
                     <input
                         type='text'
                         className='form__org-input'
-                        value={organizationName}
-                        onChange={event => setOrganizationName(event.target.value)}
+                        value={orgName}
+                        onChange={handleOrgName}
                     />
                 </label>
             </div>

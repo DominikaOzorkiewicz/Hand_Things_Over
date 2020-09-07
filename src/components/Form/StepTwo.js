@@ -2,14 +2,14 @@ import React, {useState} from "react";
 import arrowDown from '../../assets/icon-arrow-down.svg';
 import arrowUp from '../../assets/icon-arrow-up.svg';
 
-export const StepTwo = () => {
+export const StepTwo = ( {bagsQuantity, handleComplexInfo} ) => {
     // Options for select custom input
     const options = [1, 2, 3, 4, 5];
     // Selected option
-    const [bagsQuantity, setBagsQuantity] = useState('— wybierz —');
-
+    const [bags, setBags] = useState(bagsQuantity);
     const handleSelectBagsQuantity = (event) => {
-        setBagsQuantity(event.target.value);
+        handleComplexInfo('bagsQuantity', event.target.value);
+        setBags(event.target.value);
     }
 
     // Drop options list for select custom input
@@ -17,7 +17,6 @@ export const StepTwo = () => {
     const handleDrop = (event) => {
         setDrop(!drop);
     }
-
 
     return (
         <div className='form__select-container'>
@@ -30,7 +29,7 @@ export const StepTwo = () => {
 
                 <div className='form__select-input' onClick={handleDrop}>
                     <div className='form__select-value'>
-                        {bagsQuantity}
+                        {bags}
                     </div>
                     <img
                         className='form__select-arrow'

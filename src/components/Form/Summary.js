@@ -2,7 +2,7 @@ import React from "react";
 import clothImg from '../../assets/icon-1.svg';
 import pickupImg from '../../assets/icon-4.svg'
 
-export const Summary = () => {
+export const Summary = ({stepsInfo}) => {
 
     return (
         <section className='summary row'>
@@ -18,7 +18,7 @@ export const Summary = () => {
                             className='summary__img'
                             alt='T-shirt'
                         />
-                        <p>{} worki, {}, {}</p>
+                        <p>{stepsInfo.bagsQuantity} worki, {stepsInfo.donatedThings}, {stepsInfo.helpGroup}</p>
                     </li>
                     <li className='summary__stuff-list-el'>
                         <img
@@ -26,7 +26,7 @@ export const Summary = () => {
                             className='summary__img'
                             alt='Arrow Circle'
                         />
-                        <p>dla lokalizacji: {}</p>
+                        <p>dla lokalizacji: {stepsInfo.location}</p>
                     </li>
                 </ul>
             </div>
@@ -39,34 +39,34 @@ export const Summary = () => {
                     <ul className='summary__pickup-list'>
                         <li className='summary__pickup-list-el'>
                             <p className='summary__pickup-label'>
-                                Ulica
+                                Ulica:
                             </p>
                             <p className='summary__pickup-value'>
-                                {}
+                                {stepsInfo.userAddress.street}
                             </p>
                         </li>
                         <li className='summary__pickup-list-el'>
                             <p className='summary__pickup-label'>
-                                Miasto
+                                Miasto:
                             </p>
                             <p className='summary__pickup-value'>
-                                {}
+                                {stepsInfo.userAddress.city}
                             </p>
                         </li>
                         <li className='summary__pickup-list-el'>
                             <p className='summary__pickup-label'>
-                                Kod<br/>pocztowy
+                                Kod<br/>pocztowy:
                             </p>
                             <p className='summary__pickup-value'>
-                                {}
+                                {stepsInfo.userAddress.postcode}
                             </p>
                         </li>
                         <li className='summary__pickup-list-el'>
                             <p className='summary__pickup-label'>
-                                Numer<br/>telefonu
+                                Numer<br/>telefonu:
                             </p>
                             <p className='summary__pickup-value'>
-                                {}
+                                {stepsInfo.userAddress.phone}
                             </p>
                         </li>
                     </ul>
@@ -79,26 +79,26 @@ export const Summary = () => {
                     <ul className='summary__pickup-list'>
                         <li className='summary__pickup-list-el'>
                             <p className='summary__pickup-label'>
-                                Data
+                                Data:
                             </p>
                             <p className='summary__pickup-value'>
-                                {}
+                                {stepsInfo.pickupDate.date}
                             </p>
                         </li>
                         <li className='summary__pickup-list-el'>
                             <p className='summary__pickup-label'>
-                                Godzina
+                                Godzina:
                             </p>
                             <p className='summary__pickup-value'>
-                                {}
+                                {stepsInfo.pickupDate.hour}
                             </p>
                         </li>
                         <li className='summary__pickup-list-el'>
                             <p className='summary__pickup-label'>
-                                Uwagi dla kuriera
+                                Uwagi dla kuriera:
                             </p>
                             <p className='summary__pickup-value'>
-                                {}
+                                {stepsInfo.pickupDate.notes}
                             </p>
                         </li>
                     </ul>

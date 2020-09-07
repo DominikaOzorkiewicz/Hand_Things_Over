@@ -1,40 +1,28 @@
 import React, {useState} from "react";
 
-export const StepFour = () => {
+export const StepFour = ( {userAddress, pickupDate, handleComplexInfo} ) => {
 
     // Pickup Address
-    const [userAddress, setUserAddress] = useState({
-        street: '',
-        city: '',
-        postcode: '',
-        phone: ''
-    });
-
+    const [address, setAddress] = useState(userAddress);
     const handleSetAddress = event => {
         const {name, value} = event.target;
-
-        setUserAddress(prev => ({
+        setAddress(prev => ({
             ...prev,
             [name]: value
         }));
+        handleComplexInfo('userAddress', address);
     }
 
     // Pickup Date
-    const [pickupDate, setPickupDate] = useState({
-        date: '',
-        hour: '',
-        notes: ''
-    });
-
+    const [date, setDate] = useState(pickupDate);
     const handleSetDate = event => {
         const {name, value} = event.target;
-
-        setPickupDate(prev => ({
+        setDate(prev => ({
             ...prev,
             [name]: value
         }));
+        handleComplexInfo('pickupDate', date);
     }
-
 
     return (
         <>
@@ -57,7 +45,7 @@ export const StepFour = () => {
                             id='street'
                             name='street'
                             className='form__pickup-input'
-                            value={userAddress.street}
+                            value={address.street}
                             onChange={handleSetAddress}
                             minLength={2}
                             required
@@ -76,7 +64,7 @@ export const StepFour = () => {
                             id='city'
                             name='city'
                             className='form__pickup-input'
-                            value={userAddress.city}
+                            value={address.city}
                             onChange={handleSetAddress}
                             minLength={2}
                             required
@@ -95,7 +83,7 @@ export const StepFour = () => {
                             id='postcode'
                             name='postcode'
                             className='form__pickup-input'
-                            value={userAddress.postcode}
+                            value={address.postcode}
                             onChange={handleSetAddress}
                             pattern="[0-9]{2}-[0-9]{3}"
                             minLength={6}
@@ -116,7 +104,7 @@ export const StepFour = () => {
                             id='phone'
                             name='phone'
                             className='form__pickup-input'
-                            value={userAddress.phone}
+                            value={address.phone}
                             onChange={handleSetAddress}
                             pattern="[0-9]{3}-[0-9]{3}-[0-9]{3}"
                             minLength={9}
@@ -143,7 +131,7 @@ export const StepFour = () => {
                             id='date'
                             name='date'
                             className='form__pickup-input'
-                            value={pickupDate.date}
+                            value={date.date}
                             onChange={handleSetDate}
                             required
                         />
@@ -161,7 +149,7 @@ export const StepFour = () => {
                             id='hour'
                             name='hour'
                             className='form__pickup-input'
-                            value={pickupDate.hour}
+                            value={date.hour}
                             onChange={handleSetDate}
                             required
                         />
@@ -179,7 +167,7 @@ export const StepFour = () => {
                             id='notes'
                             name='notes'
                             className='form__pickup-input'
-                            value={pickupDate.notes}
+                            value={date.notes}
                             onChange={handleSetDate}
                             style={ {width: '256px', height: '120px'} }
                         />
