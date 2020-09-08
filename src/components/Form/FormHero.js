@@ -13,7 +13,7 @@ export const FormHero = () => {
             </div>
 
             <div className='col-6 formHero__content'>
-                <Header/>
+                <Header />
 
                 <div className='formHero__start'>
                     <h2 className='formHero__start-title' style={ {fontWeight: '400'} }>

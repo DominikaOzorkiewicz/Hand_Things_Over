@@ -18,10 +18,10 @@ export const Steps = () => {
     const [stepComponent, setStepComponent] = useState(<StepOne />);
 
     // Complex steps form info
-    const [stepsInfo, setStepsInfo] = useState({
+    const [donationInfo, setDonationInfo] = useState({
         donatedThings: '',
-        bagsQuantity: 0,
-        location: '',
+        bagsQuantity: '— wybierz —',
+        location: '— wybierz —',
         helpGroup: '',
         organizationName: '',
         userAddress: {
@@ -38,13 +38,13 @@ export const Steps = () => {
     });
 
     const handleComplexInfo = (name, value) => {
-        setStepsInfo(prev => ({
+        setDonationInfo(prev => ({
             ...prev,
             [name]: value
         }));
     }
 
-    console.log(stepsInfo);
+    console.log(donationInfo);
 
 
     // Switch statement for set Step
@@ -53,13 +53,14 @@ export const Steps = () => {
             case 1:
                 setCurrentStep(1);
                 setTitle('Zaznacz co chcesz oddać:');
-                //setStepComponent(<StepOne donatedThings={donatedThings} handleThings={handleDonatedThings}/>);
                 setStepComponent(
                     <StepOne
-                        donatedThings={stepsInfo.donatedThings}
+                        donatedThings={donationInfo.donatedThings}
                         handleComplexInfo={handleComplexInfo}/>
                         );
-                setInfoText('Uzupełnij szczegóły dotyczące Twoich rzeczy. Dzięki temu będziemy wiedzieć komu najlepiej je przekazać.');
+                setInfoText(
+                    'Uzupełnij szczegóły dotyczące Twoich rzeczy.' +
+                    'Dzięki temu będziemy wiedzieć komu najlepiej je przekazać.');
                 break;
 
             case 2:
@@ -67,10 +68,12 @@ export const Steps = () => {
                 setTitle('Podaj liczbę 60l worków, w które spakowałeś/aś rzeczy:');
                 setStepComponent(
                     <StepTwo
-                        bagsQuantity={stepsInfo.bagsQuantity}
+                        bagsQuantity={donationInfo.bagsQuantity}
                         handleComplexInfo={handleComplexInfo}/>
                     );
-                setInfoText('Wszystkie rzeczy do oddania zapakuj w 60l worki. Dokładną instrukcję jak poprawnie spakować rzeczy znajdziesz TUTAJ.');
+                setInfoText(
+                    'Wszystkie rzeczy do oddania zapakuj w 60l worki.' +
+                    'Dokładną instrukcję jak poprawnie spakować rzeczy znajdziesz TUTAJ.');
                 break;
 
             case 3:
@@ -78,12 +81,15 @@ export const Steps = () => {
                 setTitle('Lokalizacja:');
                 setStepComponent(
                     <StepThree
-                        location={stepsInfo.location}
-                        helpGroup={stepsInfo.helpGroup}
-                        organizationName={stepsInfo.organizationName}
+                        location={donationInfo.location}
+                        helpGroup={donationInfo.helpGroup}
+                        organizationName={donationInfo.organizationName}
                         handleComplexInfo={handleComplexInfo}/>
                         );
-                setInfoText('Jeśli wiesz komu chcesz pomóc, możesz wpisać nazwę tej organizacji w wyszukiwarce. Możesz też filtrować organizacje po ich lokalizacji bądź celu ich pomocy.');
+                setInfoText(
+                    'Jeśli wiesz komu chcesz pomóc,' +
+                    'możesz wpisać nazwę tej organizacji w wyszukiwarce.' +
+                    'Możesz też filtrować organizacje po ich lokalizacji bądź celu ich pomocy.');
                 break;
 
             case 4:
@@ -91,8 +97,8 @@ export const Steps = () => {
                 setTitle('Podaj adres oraz termin odbioru rzeczy przez kuriera');
                 setStepComponent(
                     <StepFour
-                        userAddress={stepsInfo.userAddress}
-                        pickupDate={stepsInfo.pickupDate}
+                        userAddress={donationInfo.userAddress}
+                        pickupDate={donationInfo.pickupDate}
                         handleComplexInfo={handleComplexInfo}/>
                         );
                 setInfoText('Podaj adres oraz termin odbioru rzeczy.');
@@ -101,7 +107,7 @@ export const Steps = () => {
             case 5:
                 setCurrentStep(5);
                 setTitle('Podsumowanie Twojej darowizny');
-                setStepComponent(<Summary stepsInfo={stepsInfo}/>);
+                setStepComponent(<Summary donationInfo={donationInfo}/>);
                 setInfoText('');
                 break;
 

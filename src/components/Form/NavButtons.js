@@ -1,6 +1,6 @@
 import React, {useState} from "react";
 
-export const NavButtons = ({currentStep, changePage}) => {
+export const NavButtons = ({ currentStep, changePage }) => {
     const [page, setPage] = useState(currentStep);
 
     // Method for set next page
@@ -17,8 +17,6 @@ export const NavButtons = ({currentStep, changePage}) => {
         changePage(page -1);
     }
 
-
-    console.log(page);
     // In ThankYou component NavButtons disappears
     if (page >= 6) return null;
 

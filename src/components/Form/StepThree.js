@@ -2,7 +2,7 @@ import React, {useState} from "react";
 import arrowDown from "../../assets/icon-arrow-down.svg";
 import arrowUp from "../../assets/icon-arrow-up.svg";
 
-export const StepThree = ( {location, helpGroup, organizationName, handleComplexInfo} ) => {
+export const StepThree = ({ location, helpGroup, organizationName, handleComplexInfo }) => {
     // Location
     const cities = ['Katowice', 'Kraków', 'Poznań', 'Warszawa', 'Wrocław'];
     const [city, setCity] = useState(location);
@@ -34,7 +34,7 @@ export const StepThree = ( {location, helpGroup, organizationName, handleComplex
 
     return (
         <>
-            { /* --- START Location select --- */}
+            {/* --- START Location select --- */}
             <div className='form__location'>
                 <div className='form__location-select form__select'>
                     <div className='form__select-input' onClick={handleDrop}>
@@ -43,15 +43,15 @@ export const StepThree = ( {location, helpGroup, organizationName, handleComplex
                         </div>
                         <img
                             className='form__select-arrow'
-                            src={ (drop === true ? arrowDown : arrowUp) }
+                            src={drop === true ? arrowDown : arrowUp}
                             alt='Arrow'
                         />
                     </div>
                     <div
-                        className={ (drop === true ?
+                        className={drop === true ?
                             'form__location-select-list form__select-list--drop'
                             :
-                            'form__select-list--hidden') }
+                            'form__select-list--hidden'}
                         onClick={handleDrop}>
                         {drop && (
                             <ul>
@@ -70,14 +70,14 @@ export const StepThree = ( {location, helpGroup, organizationName, handleComplex
                     </div>
                 </div>
             </div>
-            { /* --- END Location select --- */}
+            {/* --- END Location select --- */}
 
-            { /* --- START Help Groups checkboxes --- */}
+            {/* --- START Help Groups checkboxes --- */}
             <p className='form__helpGroups-title row'>
                 Komu chcesz pomóc?
             </p>
             <div className='form__helpGroups row'>
-                { helpGroups.map((group, index) =>
+                {helpGroups.map((group, index) =>
                     <React.Fragment key={index}>
                         <input type='checkbox'
                                id={group}
@@ -94,11 +94,11 @@ export const StepThree = ( {location, helpGroup, organizationName, handleComplex
                             {group}
                         </label>
                     </React.Fragment>
-                ) }
+                )}
             </div>
-            { /* --- END Help Groups checkboxes --- */}
+            {/* --- END Help Groups checkboxes --- */}
 
-            { /* --- START Organization text input --- */}
+            {/* --- START Organization text input --- */}
             <div className='form__org'>
                 <label className='form__org-label'>
                     Wpisz nazwę konkretnej organizacji (opcjonalnie)
@@ -110,7 +110,7 @@ export const StepThree = ( {location, helpGroup, organizationName, handleComplex
                     />
                 </label>
             </div>
-            { /* --- END Organization text input --- */}
+            {/* --- END Organization text input --- */}
         </>
     );
 }

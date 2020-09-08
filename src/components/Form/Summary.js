@@ -2,7 +2,7 @@ import React from "react";
 import clothImg from '../../assets/icon-1.svg';
 import pickupImg from '../../assets/icon-4.svg'
 
-export const Summary = ({stepsInfo}) => {
+export const Summary = ({ donationInfo }) => {
 
     return (
         <section className='summary row'>
@@ -18,7 +18,11 @@ export const Summary = ({stepsInfo}) => {
                             className='summary__img'
                             alt='T-shirt'
                         />
-                        <p>{stepsInfo.bagsQuantity} worki, {stepsInfo.donatedThings}, {stepsInfo.helpGroup}</p>
+                        <p>
+                            {donationInfo.bagsQuantity} {donationInfo.bagsQuantity === 1 && 'worek'}{donationInfo.bagsQuantity === 5 && 'worków'}{donationInfo.bagsQuantity > 1 && donationInfo.bagsQuantity < 5 && 'worki'}
+                            , {donationInfo.donatedThings}
+                            , {donationInfo.helpGroup}
+                        </p>
                     </li>
                     <li className='summary__stuff-list-el'>
                         <img
@@ -26,7 +30,7 @@ export const Summary = ({stepsInfo}) => {
                             className='summary__img'
                             alt='Arrow Circle'
                         />
-                        <p>dla lokalizacji: {stepsInfo.location}</p>
+                        <p>dla lokalizacji: {donationInfo.location}</p>
                     </li>
                 </ul>
             </div>
@@ -42,7 +46,7 @@ export const Summary = ({stepsInfo}) => {
                                 Ulica:
                             </p>
                             <p className='summary__pickup-value'>
-                                {stepsInfo.userAddress.street}
+                                {donationInfo.userAddress.street}
                             </p>
                         </li>
                         <li className='summary__pickup-list-el'>
@@ -50,7 +54,7 @@ export const Summary = ({stepsInfo}) => {
                                 Miasto:
                             </p>
                             <p className='summary__pickup-value'>
-                                {stepsInfo.userAddress.city}
+                                {donationInfo.userAddress.city}
                             </p>
                         </li>
                         <li className='summary__pickup-list-el'>
@@ -58,7 +62,7 @@ export const Summary = ({stepsInfo}) => {
                                 Kod<br/>pocztowy:
                             </p>
                             <p className='summary__pickup-value'>
-                                {stepsInfo.userAddress.postcode}
+                                {donationInfo.userAddress.postcode}
                             </p>
                         </li>
                         <li className='summary__pickup-list-el'>
@@ -66,7 +70,7 @@ export const Summary = ({stepsInfo}) => {
                                 Numer<br/>telefonu:
                             </p>
                             <p className='summary__pickup-value'>
-                                {stepsInfo.userAddress.phone}
+                                {donationInfo.userAddress.phone}
                             </p>
                         </li>
                     </ul>
@@ -82,7 +86,7 @@ export const Summary = ({stepsInfo}) => {
                                 Data:
                             </p>
                             <p className='summary__pickup-value'>
-                                {stepsInfo.pickupDate.date}
+                                {donationInfo.pickupDate.date}
                             </p>
                         </li>
                         <li className='summary__pickup-list-el'>
@@ -90,7 +94,7 @@ export const Summary = ({stepsInfo}) => {
                                 Godzina:
                             </p>
                             <p className='summary__pickup-value'>
-                                {stepsInfo.pickupDate.hour}
+                                {donationInfo.pickupDate.hour}
                             </p>
                         </li>
                         <li className='summary__pickup-list-el'>
@@ -98,7 +102,7 @@ export const Summary = ({stepsInfo}) => {
                                 Uwagi dla kuriera:
                             </p>
                             <p className='summary__pickup-value'>
-                                {stepsInfo.pickupDate.notes}
+                                {donationInfo.pickupDate.notes}
                             </p>
                         </li>
                     </ul>

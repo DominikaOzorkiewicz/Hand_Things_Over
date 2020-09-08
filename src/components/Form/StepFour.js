@@ -1,6 +1,6 @@
 import React, {useState} from "react";
 
-export const StepFour = ( {userAddress, pickupDate, handleComplexInfo} ) => {
+export const StepFour = ({ userAddress, pickupDate, handleComplexInfo }) => {
 
     // Pickup Address
     const [address, setAddress] = useState(userAddress);
@@ -23,6 +23,9 @@ export const StepFour = ( {userAddress, pickupDate, handleComplexInfo} ) => {
         }));
         handleComplexInfo('pickupDate', date);
     }
+
+    // Defaulting input to the value of today
+    const today = new Date().toISOString().substr(0, 10);
 
     return (
         <>
@@ -132,6 +135,7 @@ export const StepFour = ( {userAddress, pickupDate, handleComplexInfo} ) => {
                             name='date'
                             className='form__pickup-input'
                             value={date.date}
+                            min={today}
                             onChange={handleSetDate}
                             required
                         />

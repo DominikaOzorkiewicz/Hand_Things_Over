@@ -8,7 +8,7 @@ export const Form = () => {
     return (
         <>
             <FormHero />
-            <Steps/>
+            <Steps />
             <HomeContact />
         </>
     );

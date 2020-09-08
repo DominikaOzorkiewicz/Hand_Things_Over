@@ -2,7 +2,7 @@ import React, {useState} from "react";
 import arrowDown from '../../assets/icon-arrow-down.svg';
 import arrowUp from '../../assets/icon-arrow-up.svg';
 
-export const StepTwo = ( {bagsQuantity, handleComplexInfo} ) => {
+export const StepTwo = ({ bagsQuantity, handleComplexInfo }) => {
     // Options for select custom input
     const options = [1, 2, 3, 4, 5];
     // Selected option
@@ -33,12 +33,12 @@ export const StepTwo = ( {bagsQuantity, handleComplexInfo} ) => {
                     </div>
                     <img
                         className='form__select-arrow'
-                        src={ (drop === true ? arrowDown : arrowUp) }
+                        src={drop === true ? arrowDown : arrowUp}
                         alt='Arrow'
                     />
                 </div>
 
-                <div className={ (drop === true ? 'form__select-list--drop' : 'form__select-list--hidden') } onClick={handleDrop}>
+                <div className={drop === true ? 'form__select-list--drop' : 'form__select-list--hidden'} onClick={handleDrop}>
                     {drop && (
                         <ul>
                             {options.map((option, index) =>
