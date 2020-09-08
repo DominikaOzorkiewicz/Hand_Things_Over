@@ -62,6 +62,7 @@ export const NavButtons = ({ currentStep, changePage }) => {
                         className='navButtons__button'
                         form='donationForm'
                         type='submit'
+                        onClick={handleNextPage}
                     >
                         Potwierdzam
                     </button>

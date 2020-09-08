@@ -25,7 +25,7 @@ This project uses a number of open source projects to work properly:
 * [React Scroll](https://github.com/fisshy/react-scroll) -  for animating vertical scrolling
 * [React App Rewired](https://github.com/timarney/react-app-rewired) and [Customize-CRA](https://github.com/arackaf/customize-cra) - to override create-react-app webpack configs without ejecting
 * [React Visibility Sensor](https://github.com/joshwnj/react-visibility-sensor) - Sensor component for React that notifies you when it goes in or out of the window viewport
-* [Firebase](https://firebase.google.com) - authentication with email address and password
+* [Firebase](https://firebase.google.com) - authentication with email address and password, Realtime Database
 
 ## Setup
 To run this project, install it locally using npm:
@@ -58,7 +58,7 @@ $ npm start
 
 ## Todos
 
- - Completing the form for donating items
+ - Completing the form for donating items ✔
  - Linking the completed form with the user's account
  - User panel
  - Version for mobile devices

@@ -6,6 +6,8 @@ import {StepThree} from "./StepThree";
 import {StepFour} from "./StepFour";
 import {NavButtons} from "./NavButtons";
 import {Summary} from "./Summary";
+import firebase from "firebase";
+import {ThankYou} from "./ThankYou";
 
 export const Steps = () => {
     // Set current Step number
@@ -19,6 +21,7 @@ export const Steps = () => {
 
     // Complex steps form info
     const [donationInfo, setDonationInfo] = useState({
+        userID: JSON.parse(localStorage.getItem('ActiveUser')).user.uid,
         donatedThings: '',
         bagsQuantity: '— wybierz —',
         location: '— wybierz —',
@@ -43,8 +46,6 @@ export const Steps = () => {
             [name]: value
         }));
     }
-
-    console.log(donationInfo);
 
 
     // Switch statement for set Step
@@ -111,6 +112,13 @@ export const Steps = () => {
                 setInfoText('');
                 break;
 
+            case 6:
+                setCurrentStep(6);
+                setTitle('');
+                setStepComponent(<ThankYou />);
+                setInfoText('');
+                break;
+
             default:
                 break;
         }
@@ -120,16 +128,25 @@ export const Steps = () => {
         setCurrentStep(page);
     }
 
+    // Submit form and save it in database
+    const handleSubmitForm = (event) => {
+        event.preventDefault();
+        // Get a key for a new Post
+        let newPostKey = firebase.database().ref().child('donations').push().key;
+        firebase
+            .database().ref('donations/' + newPostKey).set(donationInfo);
+    }
+
 
     return (
         <>
-            {currentStep === 5 ?
+            {currentStep >= 5 ?
                 null : <Info text={infoText} />
             }
 
             <section className='steps row'>
                 <div className='col-12 steps__numbering'>
-                    {currentStep === 5 ? null :
+                    {currentStep >= 5 ? null :
                         <p>
                             Krok {currentStep}/4
                         </p>
@@ -143,7 +160,11 @@ export const Steps = () => {
                 </div>
 
                 <div className='col-8'>
-                    <form className='form' id='donationForm'>
+                    <form
+                        className='form'
+                        id='donationForm'
+                        onSubmit={handleSubmitForm}
+                    >
                         {stepComponent}
                     </form>
                 </div>
