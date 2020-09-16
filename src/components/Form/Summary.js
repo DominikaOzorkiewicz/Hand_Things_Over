@@ -30,7 +30,9 @@ export const Summary = ({ donationInfo }) => {
                             className='summary__img'
                             alt='Arrow Circle'
                         />
-                        <p>dla lokalizacji: {donationInfo.location}</p>
+                        <p>
+                            dla lokalizacji: {donationInfo.location}
+                        </p>
                     </li>
                 </ul>
             </div>

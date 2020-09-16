@@ -8,8 +8,8 @@ export const HomeOrganizationsList = ({ contentType }) => {
     const [type, setType] = useState('Fundacja');
     const [activeList, setActiveList] = useState([]);
     const [currentPage, setCurrentPage] = useState(1);
-    const [charityElementsPerPage, setCharityElementsPerPage] = useState(3);
     const [elementsCount, setElementsCount] = useState(0);
+    const charityElementsPerPage= 3;
 
     const indexOfLastElement = currentPage * charityElementsPerPage;
     const indexOfFirstElement = indexOfLastElement - charityElementsPerPage;
@@ -38,7 +38,7 @@ export const HomeOrganizationsList = ({ contentType }) => {
         setCurrentPage(pageNumber);
     }
 
-    if ( (activeList).length === 0 ) return null;
+    if ((activeList).length === 0) return null;
 
     return (
         <div className='charity'>
@@ -63,7 +63,14 @@ export const HomeOrganizationsList = ({ contentType }) => {
                 )}
             </ul>
 
-            {elementsCount <= 3 ? null : <Pagination elementsCount={elementsCount} changePage={changePage} /> }
+            {elementsCount <= 3 ?
+                null
+                :
+                <Pagination
+                    elementsCount={elementsCount}
+                    changePage={changePage}
+                />
+            }
 
         </div>
     );

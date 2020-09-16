@@ -52,7 +52,6 @@ export const Login = () => {
                     setLoginError(error.message);
                     console.log(error.message);
                 });
-            console.log(user);
             console.log('Użytkownik został zalogowany');
         }
     }
@@ -69,20 +68,25 @@ export const Login = () => {
 
             <div className='row'>
                 <div className='col-12 login__column'>
-                    <div className='login__title'>Zaloguj</div>
+                    <div className='login__title'>
+                        Zaloguj
+                    </div>
                     <img className='login__deco' src={decoration} alt='Dekoracja' />
 
-                    { loginError.length > 0 ?
+                    {loginError.length > 0 ? (
                         <p className='error__message'>
                             {loginError}
                         </p>
-                        :
-                        <p className='error__message' hidden={true}>
+                    ) : (
+                        <p className='error__message' hidden>
                             {loginError}
                         </p>
-                    }
+                    )}
 
-                    <form className='login__form' onSubmit={handleLogIn}>
+                    <form
+                        className='login__form'
+                        onSubmit={handleLogIn}
+                    >
                         <div className='login__form-inputs'>
                             <label className='login__form-label'>
                                 Email
@@ -93,15 +97,15 @@ export const Login = () => {
                                     value={user.email}
                                     onChange={handleChangeData}
                                 />
-                                { emailError.length > 0 ?
+                                {emailError.length > 0 ? (
                                     <p className='error'>
                                         {emailError}
                                     </p>
-                                    :
-                                    <p className='error' hidden={true}>
+                                ) : (
+                                    <p className='error' hidden>
                                         {emailError}
                                     </p>
-                                }
+                                )}
                             </label>
                             <label className='login__form-label'>
                                 Hasło
@@ -112,19 +116,21 @@ export const Login = () => {
                                     value={user.password}
                                     onChange={handleChangeData}
                                 />
-                                { passwordError.length > 0 ?
+                                {passwordError.length > 0 ? (
                                     <p className='error'>
                                         {passwordError}
                                     </p>
-                                    :
-                                    <p className='error' hidden={true}>
+                                ) : (
+                                    <p className='error' hidden>
                                         {passwordError}
                                     </p>
-                                }
+                                )}
                             </label>
                         </div>
 
-                        <div style={ {width: '500px', display: 'flex', justifyContent: 'space-between', marginTop: '40px'} }>
+                        <div
+                            style={ {width: '500px', display: 'flex', justifyContent: 'space-between', marginTop: '40px'} }
+                        >
                             <Link to='/register' className='header__user-link'>
                                 Załóż konto
                             </Link>

@@ -17,7 +17,9 @@ export const Logout = () => {
 
             <div className='row'>
                 <div className='col-12 logout__column'>
-                    <div className='logout__title'>Wylogowanie nastąpiło<br/>pomyślnie!</div>
+                    <div className='logout__title'>
+                        Wylogowanie nastąpiło<br/>pomyślnie!
+                    </div>
                     <img className='logout__deco' src={decoration} alt='Dekoracja' />
                     <Link to='/' className='header__user-link logout__button'>
                         Strona główna

@@ -15,7 +15,7 @@ export const HomeHeader = () => {
     return (
         <header className='header' id='header'>
 
-            { loggedUser.length > 1 ?
+            {loggedUser.length > 1 ? (
                 <div className='header__user'>
                     <div className='header__user-link header__user--email'>
                         Witaj {loggedUser}!
@@ -28,7 +28,7 @@ export const HomeHeader = () => {
                         Wyloguj
                     </Link>
                 </div>
-                :
+            ) : (
                 <div className='header__user'>
                     <Link to='/login' className='header__user-link'>
                         Zaloguj
@@ -37,7 +37,7 @@ export const HomeHeader = () => {
                         Załóż konto
                     </Link>
                 </div>
-            }
+            )}
 
             <nav className='header__nav'>
                 <ul className='nav__list'>

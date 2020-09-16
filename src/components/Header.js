@@ -22,20 +22,26 @@ export const Header = () => {
     return (
         <header className='header' id='header'>
 
-            { loggedUser.length > 1 ?
+            {loggedUser.length > 1 ? (
                 <div className='header__user'>
                     <div className='header__user-link header__user--email'>
                         Witaj {loggedUser}!
                     </div>
-                    <Link to='/oddaj-rzeczy' className='header__user-link header__user--donate'>
+                    <Link
+                        to='/oddaj-rzeczy'
+                        className='header__user-link header__user--donate'
+                    >
                         Oddaj rzeczy
                     </Link>
-                    <Link to='/logout' className='header__user-link header__user--logout'
-                          onClick={handleLogOut}>
+                    <Link
+                        to='/logout'
+                        className='header__user-link header__user--logout'
+                        onClick={handleLogOut}
+                    >
                         Wyloguj
                     </Link>
                 </div>
-                :
+            ) : (
                 <div className='header__user'>
                     <Link to='/login' className='header__user-link'>
                         Zaloguj
@@ -44,7 +50,7 @@ export const Header = () => {
                         Załóż konto
                     </Link>
                 </div>
-            }
+            )}
 
             <nav className='header__nav'>
                 <ul className='nav__list'>

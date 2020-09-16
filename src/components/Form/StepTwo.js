@@ -38,14 +38,18 @@ export const StepTwo = ({ bagsQuantity, handleComplexInfo }) => {
                     />
                 </div>
 
-                <div className={drop === true ? 'form__select-list--drop' : 'form__select-list--hidden'} onClick={handleDrop}>
+                <div
+                    className={drop === true ? 'form__select-list--drop' : 'form__select-list--hidden'}
+                    onClick={handleDrop}
+                >
                     {drop && (
                         <ul>
                             {options.map((option, index) =>
                                 <li key={index}
                                     value={option}
-                                    className={'form__select-list-el'}
-                                    onClick={handleSelectBagsQuantity}>
+                                    className='form__select-list-el'
+                                    onClick={handleSelectBagsQuantity}
+                                >
                                     {option}
                                 </li>
                             )}

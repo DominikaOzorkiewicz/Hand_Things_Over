@@ -6,8 +6,8 @@ import {StepThree} from "./StepThree";
 import {StepFour} from "./StepFour";
 import {NavButtons} from "./NavButtons";
 import {Summary} from "./Summary";
-import firebase from "firebase";
 import {ThankYou} from "./ThankYou";
+import firebase from "firebase";
 
 export const Steps = () => {
     // Set current Step number
@@ -57,10 +57,9 @@ export const Steps = () => {
                 setStepComponent(
                     <StepOne
                         donatedThings={donationInfo.donatedThings}
-                        handleComplexInfo={handleComplexInfo}/>
-                        );
-                setInfoText(
-                    'Uzupełnij szczegóły dotyczące Twoich rzeczy.' +
+                        handleComplexInfo={handleComplexInfo}
+                    />);
+                setInfoText('Uzupełnij szczegóły dotyczące Twoich rzeczy. ' +
                     'Dzięki temu będziemy wiedzieć komu najlepiej je przekazać.');
                 break;
 
@@ -70,10 +69,9 @@ export const Steps = () => {
                 setStepComponent(
                     <StepTwo
                         bagsQuantity={donationInfo.bagsQuantity}
-                        handleComplexInfo={handleComplexInfo}/>
-                    );
-                setInfoText(
-                    'Wszystkie rzeczy do oddania zapakuj w 60l worki.' +
+                        handleComplexInfo={handleComplexInfo}
+                    />);
+                setInfoText('Wszystkie rzeczy do oddania zapakuj w 60l worki. ' +
                     'Dokładną instrukcję jak poprawnie spakować rzeczy znajdziesz TUTAJ.');
                 break;
 
@@ -85,11 +83,10 @@ export const Steps = () => {
                         location={donationInfo.location}
                         helpGroup={donationInfo.helpGroup}
                         organizationName={donationInfo.organizationName}
-                        handleComplexInfo={handleComplexInfo}/>
-                        );
-                setInfoText(
-                    'Jeśli wiesz komu chcesz pomóc,' +
-                    'możesz wpisać nazwę tej organizacji w wyszukiwarce.' +
+                        handleComplexInfo={handleComplexInfo}
+                    />);
+                setInfoText('Jeśli wiesz komu chcesz pomóc, ' +
+                    'możesz wpisać nazwę tej organizacji w wyszukiwarce. ' +
                     'Możesz też filtrować organizacje po ich lokalizacji bądź celu ich pomocy.');
                 break;
 
@@ -100,15 +97,15 @@ export const Steps = () => {
                     <StepFour
                         userAddress={donationInfo.userAddress}
                         pickupDate={donationInfo.pickupDate}
-                        handleComplexInfo={handleComplexInfo}/>
-                        );
+                        handleComplexInfo={handleComplexInfo}
+                    />);
                 setInfoText('Podaj adres oraz termin odbioru rzeczy.');
                 break;
 
             case 5:
                 setCurrentStep(5);
                 setTitle('Podsumowanie Twojej darowizny');
-                setStepComponent(<Summary donationInfo={donationInfo}/>);
+                setStepComponent(<Summary donationInfo={donationInfo} />);
                 setInfoText('');
                 break;
 
@@ -170,7 +167,7 @@ export const Steps = () => {
                 </div>
 
                 <div className='col-5 navButtons'>
-                    <NavButtons currentStep={currentStep} changePage={handleChangePage}/>
+                    <NavButtons currentStep={currentStep} changePage={handleChangePage} />
                 </div>
 
             </section>

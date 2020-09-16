@@ -20,7 +20,7 @@ export const StepOne = ({ donatedThings, handleComplexInfo }) => {
                            onChange={handleSelectDonatedThings}
                            checked={donatedType === 'ubrania, które nadają się do ponownego użycia'}
                     />
-                    <span className='form__checkbox-checkmark'/>
+                    <span className='form__checkbox-checkmark' />
                 </label>
 
                 <label className='form__checkbox-container'>
@@ -32,7 +32,7 @@ export const StepOne = ({ donatedThings, handleComplexInfo }) => {
                            onChange={handleSelectDonatedThings}
                            checked={donatedType === 'ubrania, do wyrzucenia'}
                     />
-                    <span className='form__checkbox-checkmark'/>
+                    <span className='form__checkbox-checkmark' />
                 </label>
 
                 <label className='form__checkbox-container'>
@@ -44,7 +44,7 @@ export const StepOne = ({ donatedThings, handleComplexInfo }) => {
                            onChange={handleSelectDonatedThings}
                            checked={donatedType === 'zabawki'}
                     />
-                    <span className='form__checkbox-checkmark'/>
+                    <span className='form__checkbox-checkmark' />
                 </label>
 
                 <label className='form__checkbox-container'>
@@ -56,7 +56,7 @@ export const StepOne = ({ donatedThings, handleComplexInfo }) => {
                            onChange={handleSelectDonatedThings}
                            checked={donatedType === 'książki'}
                     />
-                    <span className='form__checkbox-checkmark'/>
+                    <span className='form__checkbox-checkmark' />
                 </label>
 
                 <label className='form__checkbox-container'>
@@ -68,7 +68,7 @@ export const StepOne = ({ donatedThings, handleComplexInfo }) => {
                            onChange={handleSelectDonatedThings}
                            checked={donatedType === 'inne'}
                     />
-                    <span className='form__checkbox-checkmark'/>
+                    <span className='form__checkbox-checkmark' />
                 </label>
 
             </div>

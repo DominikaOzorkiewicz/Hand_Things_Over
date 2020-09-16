@@ -80,39 +80,42 @@ export const HomeContact = () => {
                     </h2>
                     <img src={decoration} className='contact__deco' alt='Dekoracja' />
 
-                    { status === 'success' ?
+                    {status === 'success' ? (
                         <div className='success__message'>
                             <p>Wiadomość została wysłana!</p>
                             <p>Wkrótce się skontaktujemy!</p>
                         </div>
-                        :
+                    ) : (
                         <div className='success__message'>
                             <p>&nbsp;</p>
                             <p>&nbsp;</p>
                         </div>
-                    }
+                    )}
 
-                    <form className='contact__form' onSubmit={handleSubmit}>
+                    <form
+                        className='contact__form'
+                        onSubmit={handleSubmit}
+                    >
                         <div className='contact__form-inputs'>
                             <label className='contact__form-label'>
                                 Wpisz swoje imię
                                 <input
                                     className='contact__form-input'
                                     type='text'
-                                    name={'name'}
+                                    name='name'
                                     value={completeMessage.name}
                                     onChange={handleChangeData}
                                     placeholder='Imię'
                                 />
-                                { nameError.length > 0 ?
+                                {nameError.length > 0 ? (
                                     <p className='error'>
                                         {nameError}
                                     </p>
-                                    :
-                                    <p className='error' hidden={true}>
+                                ) : (
+                                    <p className='error' hidden>
                                         {nameError}
                                     </p>
-                                }
+                                )}
                             </label>
 
                             <label className='contact__form-label'>
@@ -120,45 +123,50 @@ export const HomeContact = () => {
                                 <input
                                     className='contact__form-input'
                                     type='email'
-                                    name={'email'}
+                                    name='email'
                                     value={completeMessage.email}
                                     onChange={handleChangeData}
                                     placeholder='abc.xyz.com'
                                 />
-                                { emailError.length > 0 ?
+                                {emailError.length > 0 ? (
                                     <p className='error'>
                                         {emailError}
                                     </p>
-                                    :
-                                    <p className='error' hidden={true}>
+                                ) : (
+                                    <p className='error' hidden>
                                         {emailError}
                                     </p>
-                                }
+                                )}
                             </label>
 
                         </div>
 
-                        <label className='contact__form-label' style={ {marginTop: '40px'} }>
+                        <label
+                            className='contact__form-label'
+                            style={ {marginTop: '40px'} }
+                        >
                             Wpisz swoją wiadomość
                         </label>
                             <textarea
                                 className='contact__form-input'
-                                name={'message'}
+                                name='message'
                                 value={completeMessage.message}
                                 onChange={handleChangeData}
                                 rows={5}
                                 cols={10}
-                                placeholder='Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'
+                                placeholder='Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'
                             />
-                        { messageError.length > 0 ?
+                        {messageError.length > 0 ? (
                             <p className='error'>
                                 {messageError}
                             </p>
-                            :
-                            <p className='error' hidden={true}>
+                        ) : (
+                            <p className='error' hidden>
                                 {messageError}
                             </p>
-                        }
+                        )}
 
                         <button className='contact__form-btn' type='submit'>
                             Wyślij

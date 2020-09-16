@@ -1,8 +1,8 @@
-import React, {useState} from "react";
+import React from "react";
 
 export const Pagination = ({ elementsCount, changePage }) => {
 
-    const [charityElementsPerPage, setCharityElementsPerPage] = useState(3);
+    const charityElementsPerPage = 3;
 
     const pages = [];
     for (let i = 1; i <= elementsCount/charityElementsPerPage; i++) {
@@ -11,11 +11,15 @@ export const Pagination = ({ elementsCount, changePage }) => {
 
     return (
         <ul className='pagination'>
-            { pages.map(pageNumber =>
-                <li key={pageNumber} className='pagination__number' onClick={ () => changePage(pageNumber) }>
+            {pages.map(pageNumber =>
+                <li
+                    key={pageNumber}
+                    className='pagination__number'
+                    onClick={() => changePage(pageNumber)}
+                >
                     {pageNumber}
                 </li>
-            ) }
+            )}
         </ul>
     );
 }

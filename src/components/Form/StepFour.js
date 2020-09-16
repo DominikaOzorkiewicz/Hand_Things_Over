@@ -5,7 +5,7 @@ export const StepFour = ({ userAddress, pickupDate, handleComplexInfo }) => {
     // Pickup Address
     const [address, setAddress] = useState(userAddress);
     const handleSetAddress = event => {
-        const {name, value} = event.target;
+        const { name, value } = event.target;
         setAddress(prev => ({
             ...prev,
             [name]: value
@@ -16,7 +16,7 @@ export const StepFour = ({ userAddress, pickupDate, handleComplexInfo }) => {
     // Pickup Date
     const [date, setDate] = useState(pickupDate);
     const handleSetDate = event => {
-        const {name, value} = event.target;
+        const { name, value } = event.target;
         setDate(prev => ({
             ...prev,
             [name]: value

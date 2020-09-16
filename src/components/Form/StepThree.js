@@ -51,8 +51,10 @@ export const StepThree = ({ location, helpGroup, organizationName, handleComplex
                         className={drop === true ?
                             'form__location-select-list form__select-list--drop'
                             :
-                            'form__select-list--hidden'}
-                        onClick={handleDrop}>
+                            'form__select-list--hidden'
+                        }
+                        onClick={handleDrop}
+                    >
                         {drop && (
                             <ul>
                                 {cities.map((city, index) =>

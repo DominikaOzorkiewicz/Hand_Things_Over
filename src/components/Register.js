@@ -18,7 +18,7 @@ export const Register = () => {
     const history = useHistory();
 
     const handleChangeData = (event) => {
-        const {name, value} = event.target;
+        const { name, value } = event.target;
         setUser(prevState => ({
             ...prevState, [name]: value
         }));
@@ -61,7 +61,6 @@ export const Register = () => {
                     setRegisterError(error.message);
                     console.log(error.message);
                 });
-            console.log(user);
             console.log('Użytkownik zarejestrowany');
         }
     }
@@ -78,20 +77,25 @@ export const Register = () => {
 
             <div className='row'>
                 <div className='col-12 register__column'>
-                    <div className='register__title'>Załóż konto</div>
+                    <div className='register__title'>
+                        Załóż konto
+                    </div>
                     <img className='register__deco' src={decoration} alt='Dekoracja' />
 
-                    { registerError.length > 0 ?
+                    {registerError.length > 0 ? (
                         <p className='error__message'>
                             {registerError}
                         </p>
-                        :
-                        <p className='error__message' hidden={true}>
+                    ) : (
+                        <p className='error__message' hidden>
                             {registerError}
                         </p>
-                    }
+                    )}
 
-                    <form className='register__form' onSubmit={handleRegister}>
+                    <form
+                        className='register__form'
+                        onSubmit={handleRegister}
+                    >
                         <div className='register__form-inputs'>
                             <label className='register__form-label'>
                                 Email
@@ -103,15 +107,15 @@ export const Register = () => {
                                     onChange={handleChangeData}
                                     required
                                 />
-                                { emailError.length > 0 ?
+                                {emailError.length > 0 ? (
                                     <p className='error'>
                                         {emailError}
                                     </p>
-                                    :
-                                    <p className='error' hidden={true}>
+                                ) : (
+                                    <p className='error' hidden>
                                         {emailError}
                                     </p>
-                                }
+                                )}
                             </label>
                             <label className='register__form-label'>
                                 Hasło
@@ -123,15 +127,15 @@ export const Register = () => {
                                     onChange={handleChangeData}
                                     required
                                 />
-                                { passwordError.length > 0 ?
+                                {passwordError.length > 0 ? (
                                     <p className='error'>
                                         {passwordError}
                                     </p>
-                                    :
-                                    <p className='error' hidden={true}>
+                                ) : (
+                                    <p className='error' hidden>
                                         {passwordError}
                                     </p>
-                                }
+                                )}
                             </label>
                             <label className='register__form-label'>
                                 Powtórz hasło
@@ -143,19 +147,21 @@ export const Register = () => {
                                     onChange={handleChangeData}
                                     required
                                 />
-                                { passwordConfirmationError.length > 0 ?
+                                {passwordConfirmationError.length > 0 ? (
                                     <p className='error'>
                                         {passwordConfirmationError}
                                     </p>
-                                    :
-                                    <p className='error' hidden={true}>
+                                ) : (
+                                    <p className='error' hidden>
                                         {passwordConfirmationError}
                                     </p>
-                                }
+                                )}
                             </label>
                         </div>
 
-                        <div style={ {width: '500px', display: 'flex', justifyContent: 'space-between', marginTop: '40px'} }>
+                        <div
+                            style={ {width: '500px', display: 'flex', justifyContent: 'space-between', marginTop: '40px'} }
+                        >
                             <Link to='/login' className='header__user-link'>
                                 Zaloguj się
                             </Link>

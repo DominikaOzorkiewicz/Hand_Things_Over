@@ -13,7 +13,6 @@ export const HomeThreeColumns = () => {
 
     const handleChangeVisibility = (isVisible) => {
         setVisibility(isVisible);
-        console.log(isVisible);
     }
 
     // Counter
@@ -38,44 +37,60 @@ export const HomeThreeColumns = () => {
 
     useEffect(() => {
         if (bagsCounter >= 10) {
-            clearInterval(counter)
+            clearInterval(counter);
         }
-
         if (organizationsCounter >= 5) {
-            clearInterval(counter2)
+            clearInterval(counter2);
         }
-
         if (collectionCounter >= 7) {
-            clearInterval(counter3)
+            clearInterval(counter3);
         }
     },[bagsCounter, organizationsCounter, collectionCounter]);
 
     return (
         <section className='threeColumns row'>
 
-            <VisibilitySensor onChange={ (isVisible) => handleChangeVisibility(isVisible) }>
+            <VisibilitySensor onChange={(isVisible) => handleChangeVisibility(isVisible)}>
                 <>
                     <div className='col-4 threeColumns__column'>
-                        <h2 className='threeColumns__column-counter'>{bagsCounter}</h2>
-                        <h5 className='threeColumns__column-title'>oddanych worków</h5>
+                        <h2 className='threeColumns__column-counter'>
+                            {bagsCounter}
+                        </h2>
+                        <h5 className='threeColumns__column-title'>
+                            oddanych worków
+                        </h5>
                         <p className='threeColumns__column-description'>
-                            Lorem ipsum dolor sit amet, consectetur adipisc Pellentesque vel enim a elit viverra elementuma. Aliquam erat volutpat.
+                            Lorem ipsum dolor sit amet, consectetur adipisc
+                            Pellentesque vel enim a elit viverra elementuma.
+                            Aliquam erat volutpat.
                         </p>
                     </div>
 
                     <div className='col-4 threeColumns__column'>
-                        <h2 className='threeColumns__column-counter'>{organizationsCounter}</h2>
-                        <h5 className='threeColumns__column-title'>wspartych organizacji</h5>
+                        <h2 className='threeColumns__column-counter'>
+                            {organizationsCounter}
+                        </h2>
+                        <h5 className='threeColumns__column-title'>
+                            wspartych organizacji
+                        </h5>
                         <p className='threeColumns__column-description'>
-                            Lorem ipsum dolor sit amet, consectetur adipisc Pellentesque vel enim a elit viverra elementuma. Aliquam erat volutpat.
+                            Lorem ipsum dolor sit amet, consectetur adipisc
+                            Pellentesque vel enim a elit viverra elementuma.
+                            Aliquam erat volutpat.
                         </p>
                     </div>
 
                     <div className='col-4 threeColumns__column'>
-                        <h2 className='threeColumns__column-counter'>{collectionCounter}</h2>
-                        <h5 className='threeColumns__column-title'>zorganizowanych zbiórek</h5>
+                        <h2 className='threeColumns__column-counter'>
+                            {collectionCounter}
+                        </h2>
+                        <h5 className='threeColumns__column-title'>
+                            zorganizowanych zbiórek
+                        </h5>
                         <p className='threeColumns__column-description'>
-                            Lorem ipsum dolor sit amet, consectetur adipisc Pellentesque vel enim a elit viverra elementuma. Aliquam erat volutpat.
+                            Lorem ipsum dolor sit amet, consectetur adipisc
+                            Pellentesque vel enim a elit viverra elementuma.
+                            Aliquam erat volutpat.
                         </p>
                     </div>
                 </>
