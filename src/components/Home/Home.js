@@ -5,6 +5,7 @@ import {HomeAbout} from "./HomeAbout";
 import {HomeSimpleSteps} from "./HomeSimpleSteps";
 import {HomeOrganizations} from "./HomeOrganizations";
 import {HomeContact} from "./HomeContact";
+import {ScrollArrow} from "../ScrollArrow";
 
 
 export const Home = () => {
@@ -17,6 +18,7 @@ export const Home = () => {
             <HomeAbout />
             <HomeOrganizations />
             <HomeContact />
+            <ScrollArrow />
         </div>
     );
 }
