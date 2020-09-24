@@ -15,6 +15,8 @@ The aim of this project is to create a place where everyone can donate unnecessa
 ## Source
 This project is based on prototype "Oddam w dobre ręce" in Adobe XD prepared by Magda - graduate of [Coders Lab](https://coderslab.pl) UX course.
 
+The design was created for screens with 1900px width or wider.
+
 ## Tech
 
 This project uses a number of open source projects to work properly:
@@ -26,6 +28,16 @@ This project uses a number of open source projects to work properly:
 * [React App Rewired](https://github.com/timarney/react-app-rewired) and [Customize-CRA](https://github.com/arackaf/customize-cra) - to override create-react-app webpack configs without ejecting
 * [React Visibility Sensor](https://github.com/joshwnj/react-visibility-sensor) - Sensor component for React that notifies you when it goes in or out of the window viewport
 * [Firebase](https://firebase.google.com) - authentication with email address and password, Realtime Database
+
+## Live Demo
+[DEMO](https://dominikaozorkiewicz.github.io/Hand_Things_Over)
+
+Use login and password to test all functionality or register your own user.
+
+```
+login: test@test.test
+password: 123456
+```
 
 ## Setup
 To run this project, install it locally using npm:
@@ -59,7 +71,13 @@ $ npm start
 ## Todos
 
  - Completing the form for donating items ✔
- - Linking the completed form with the user's account
- - User panel
+ - Linking the completed form with the user's account ✔
+ - User panel 🔧
  - Version for mobile devices
+ 
+ ## Preview
+ 
+ ![Hand Things Over preview](preview/landing-page.png)
+ 
+
 
