@@ -1,0 +1,37 @@
+{
+  "files": {
+    "main.css": "/Hand_Things_Over/static/css/main.1b90d06a.chunk.css",
+    "main.js": "/Hand_Things_Over/static/js/main.fcf92171.chunk.js",
+    "main.js.map": "/Hand_Things_Over/static/js/main.fcf92171.chunk.js.map",
+    "runtime-main.js": "/Hand_Things_Over/static/js/runtime-main.d86eda2e.js",
+    "runtime-main.js.map": "/Hand_Things_Over/static/js/runtime-main.d86eda2e.js.map",
+    "static/js/2.3021ccb9.chunk.js": "/Hand_Things_Over/static/js/2.3021ccb9.chunk.js",
+    "static/js/2.3021ccb9.chunk.js.map": "/Hand_Things_Over/static/js/2.3021ccb9.chunk.js.map",
+    "index.html": "/Hand_Things_Over/index.html",
+    "precache-manifest.6b8dfbc47a4fdc3054bf84af7bafdb3a.js": "/Hand_Things_Over/precache-manifest.6b8dfbc47a4fdc3054bf84af7bafdb3a.js",
+    "service-worker.js": "/Hand_Things_Over/service-worker.js",
+    "static/css/main.1b90d06a.chunk.css.map": "/Hand_Things_Over/static/css/main.1b90d06a.chunk.css.map",
+    "static/js/2.3021ccb9.chunk.js.LICENSE.txt": "/Hand_Things_Over/static/js/2.3021ccb9.chunk.js.LICENSE.txt",
+    "static/media/clothes-donation.svg": "/Hand_Things_Over/static/media/clothes-donation.c668ffe0.svg",
+    "static/media/main.scss": "/Hand_Things_Over/static/media/threecolumns-background.99f2e620.png",
+    "static/media/decoration.svg": "/Hand_Things_Over/static/media/decoration.2290784e.svg",
+    "static/media/facebook.svg": "/Hand_Things_Over/static/media/facebook.df65b6c0.svg",
+    "static/media/form-hero-img.jpg": "/Hand_Things_Over/static/media/form-hero-img.3bee335a.jpg",
+    "static/media/hero-img.jpg": "/Hand_Things_Over/static/media/hero-img.e99903ed.jpg",
+    "static/media/icon-1.svg": "/Hand_Things_Over/static/media/icon-1.91147906.svg",
+    "static/media/icon-2.svg": "/Hand_Things_Over/static/media/icon-2.db91e33e.svg",
+    "static/media/icon-3.svg": "/Hand_Things_Over/static/media/icon-3.2cfe9dfe.svg",
+    "static/media/icon-4.svg": "/Hand_Things_Over/static/media/icon-4.436df0aa.svg",
+    "static/media/icon-arrow-down.svg": "/Hand_Things_Over/static/media/icon-arrow-down.c470ec0c.svg",
+    "static/media/icon-arrow-up.svg": "/Hand_Things_Over/static/media/icon-arrow-up.9b7f6ef4.svg",
+    "static/media/instagram.svg": "/Hand_Things_Over/static/media/instagram.703479fd.svg",
+    "static/media/signature.svg": "/Hand_Things_Over/static/media/signature.e54cfcfc.svg",
+    "static/media/truck.svg": "/Hand_Things_Over/static/media/truck.0631e90f.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.d86eda2e.js",
+    "static/js/2.3021ccb9.chunk.js",
+    "static/css/main.1b90d06a.chunk.css",
+    "static/js/main.fcf92171.chunk.js"
+  ]
+}
