@@ -5,6 +5,7 @@ import {Login} from "./components/Login";
 import {Register} from "./components/Register";
 import {Logout} from "./components/Logout";
 import {Form} from "./components/Form/Form";
+import {UserPanel} from "./components/UserPanel";
 
 
 const App = () => {
@@ -20,6 +21,7 @@ const App = () => {
                     <Route path='/logout' component={Logout}/>
 
                     <Route path='/oddaj-rzeczy' component={Form} />
+                    <Route path='/userPanel' component={UserPanel} />
                 </>
             </HashRouter>
 
